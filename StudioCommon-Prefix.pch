@@ -1,0 +1,15 @@
+//
+//  StudioCommon-Prefix
+//  StudioCommon
+//
+//  Created by Ben on 7/30/15.
+//
+//
+
+#ifndef StudioCommon_Prefix_pch
+#define StudioCommon_Prefix_pch
+
+#import "CommonHeader.h"
+
+
+#endif
