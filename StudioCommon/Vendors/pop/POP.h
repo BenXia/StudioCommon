@@ -10,6 +10,8 @@
 #ifndef POP_POP_H
 #define POP_POP_H
 
+#import <Foundation/Foundation.h>
+#import <CoreFoundation/CoreFoundation.h>
 #import <pop/POPAnimatableProperty.h>
 #import <pop/POPAnimation.h>
 #import <pop/POPAnimationEvent.h>

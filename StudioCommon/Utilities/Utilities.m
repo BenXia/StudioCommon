@@ -10,7 +10,7 @@
 #import <objc/message.h>
 #import <Photos/Photos.h>
 #import <AssetsLibrary/ALAssetsLibrary.h>
-//#import "POP.h"
+#import "POP.h"
 
 static const NSUInteger kCoverViewTag = 99999;
 
@@ -411,33 +411,31 @@ SINGLETON_GCD(Utilities);
 
 - (void)animateInDrop {
     // 设置主体初始位置
-//    self.contentHolder.y    = -self.contentHolder.height;
-//    
-//    // 设置动画
-//    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-//    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2, kScreenHeight/2)];
-//    //弹性值
-//    springAnimation.springBounciness = 10.0;
-//    //弹性速度
-//    springAnimation.springSpeed = 20.0;
-//    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-//        //
-//    };
-//    
-//    [self.contentHolder pop_addAnimation:springAnimation forKey:kPOPLayerPositionChanged];
+    self.contentHolder.y    = -self.contentHolder.height;
+    
+    // 设置动画
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2, kScreenHeight/2)];
+    //弹性值
+    springAnimation.springBounciness = 10.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        //
+    };
+    
+    [self.contentHolder pop_addAnimation:springAnimation forKey:kPOPLayerPositionChanged];
 }
 
 - (void)animateOutDropWithCompletionBlock:(Block)completion {
     // 设置动画
-//    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-//    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2, -self.contentHolder.height)];
-//    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-//        completion();
-//    };
-//    
-//    [self.contentHolder pop_addAnimation:springAnimation forKey:kPOPLayerPositionChanged];
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(kScreenWidth/2, -self.contentHolder.height)];
+    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        completion();
+    };
     
-    completion();
+    [self.contentHolder pop_addAnimation:springAnimation forKey:kPOPLayerPositionChanged];
 }
 
 - (void)handleCloseAction:(id)sender {
