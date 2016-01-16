@@ -73,6 +73,10 @@
 		33F071C21C42CF5800DAC58F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B71C42CF5800DAC58F /* AFURLRequestSerialization.m */; };
 		33F071C31C42CF5800DAC58F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */; };
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
+		93F2A0081C49E2380034486B /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* Cache.m */; };
+		93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; };
+		93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00E1C49E42E0034486B /* ArchiveRecord.m */; };
+		93F2A01B1C49F6800034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; settings = {COMPILER_FLAGS = "-objc-arc"; }; };
 		B5F3857C1C43750900E666F7 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5F3854B1C43750900E666F7 /* POPAnimatableProperty.mm */; };
 		B5F3857D1C43750900E666F7 /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5F3854D1C43750900E666F7 /* POPAnimation.mm */; };
 		B5F3857E1C43750900E666F7 /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5F3854F1C43750900E666F7 /* POPAnimationEvent.mm */; };
@@ -235,6 +239,12 @@
 		33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		33F071BA1C42CF5800DAC58F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		93F2A0061C49E2380034486B /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
+		93F2A0071C49E2380034486B /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
+		93F2A00A1C49E2F40034486B /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
+		93F2A00D1C49E42E0034486B /* ArchiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveRecord.h; sourceTree = "<group>"; };
+		93F2A00E1C49E42E0034486B /* ArchiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveRecord.m; sourceTree = "<group>"; };
 		B5F385481C43750900E666F7 /* POP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POP.h; sourceTree = "<group>"; };
 		B5F385491C43750900E666F7 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
 		B5F3854A1C43750900E666F7 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
@@ -331,6 +341,7 @@
 			children = (
 				33F070571C429F7000DAC58F /* macrodef.h */,
 				33F070581C429F7000DAC58F /* typedef.h */,
+				93F2A0051C49E21B0034486B /* Storage */,
 				33F0707F1C42AC8600DAC58F /* Application */,
 				33F070701C42A98400DAC58F /* Animations */,
 				33F06FF11C424EE900DAC58F /* Categories */,
@@ -461,6 +472,7 @@
 		33F070A61C42B77100DAC58F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				93F2A0091C49E2F40034486B /* UICKeyChainStore */,
 				B5F385461C43750900E666F7 /* pop */,
 				33F071851C42CE9600DAC58F /* AFNetworking */,
 				33F070DC1C42C15900DAC58F /* GCDObjC */,
@@ -624,6 +636,26 @@
 				33F0719A1C42CE9700DAC58F /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		93F2A0051C49E21B0034486B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				93F2A00D1C49E42E0034486B /* ArchiveRecord.h */,
+				93F2A00E1C49E42E0034486B /* ArchiveRecord.m */,
+				93F2A0061C49E2380034486B /* Cache.h */,
+				93F2A0071C49E2380034486B /* Cache.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		93F2A0091C49E2F40034486B /* UICKeyChainStore */ = {
+			isa = PBXGroup;
+			children = (
+				93F2A00A1C49E2F40034486B /* UICKeyChainStore.h */,
+				93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */,
+			);
+			path = UICKeyChainStore;
 			sourceTree = "<group>";
 		};
 		B5F385461C43750900E666F7 /* pop */ = {
@@ -797,6 +829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F2A01B1C49F6800034486B /* UICKeyChainStore.m in Sources */,
 				33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */,
 				33F071C01C42CF5800DAC58F /* AFSecurityPolicy.m in Sources */,
 				33F070761C42A98400DAC58F /* PresentTransitioningDelegate.m in Sources */,
@@ -828,6 +861,7 @@
 				33F070751C42A98400DAC58F /* PresentAnimationNavigationController.m in Sources */,
 				33F0715B1C42C7B800DAC58F /* UIScrollView+MJRefresh.m in Sources */,
 				33F070A51C42B6FC00DAC58F /* NSString+Additions.m in Sources */,
+				93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */,
 				B5F3858B1C43750900E666F7 /* POPSpringAnimation.mm in Sources */,
 				33F071571C42C7B800DAC58F /* MJRefreshConst.m in Sources */,
 				33F071BE1C42CF5800DAC58F /* AFHTTPSessionManager.m in Sources */,
@@ -845,6 +879,7 @@
 				33F070D61C42BEEC00DAC58F /* MBProgressHUD.m in Sources */,
 				B5F385851C43750900E666F7 /* POPCustomAnimation.mm in Sources */,
 				B5F3857C1C43750900E666F7 /* POPAnimatableProperty.mm in Sources */,
+				93F2A0081C49E2380034486B /* Cache.m in Sources */,
 				B5F3858A1C43750900E666F7 /* POPPropertyAnimation.mm in Sources */,
 				B5F3858D1C43750900E666F7 /* TransformationMatrix.cpp in Sources */,
 				33F071BF1C42CF5800DAC58F /* AFNetworkReachabilityManager.m in Sources */,
@@ -870,6 +905,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

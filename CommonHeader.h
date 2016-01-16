@@ -46,6 +46,7 @@
 #import "MBProgressHUD.h"
 #import "GCDObjC.h"
 #import "AFNetworking.h"
+#import "UICKeyChainStore.h"
 
 // Views.
 #import "MJRefresh.h"
@@ -59,6 +60,10 @@
 #import "RACEXTScope.h"
 #import "Masonry.h"
 #import "SDImageCache.h"
+
+//Storage
+#import "ArchiveRecord.h"
+#import "Cache.h"
 
 #endif
 
