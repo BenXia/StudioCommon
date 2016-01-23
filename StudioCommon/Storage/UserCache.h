@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Cache : NSObject
+@interface UserCache : NSObject
 
-+ (Cache *)sharedCache;
++ (UserCache *)sharedUserCache;
 
 // 保存用户名\密码\登录状态
 - (void)setUsername:(NSString *)username password:(NSString *)password;

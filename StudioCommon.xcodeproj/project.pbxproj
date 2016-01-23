@@ -76,7 +76,7 @@
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
-		93F2A0081C49E2380034486B /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* Cache.m */; };
+		93F2A0081C49E2380034486B /* UserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* UserCache.m */; };
 		93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; };
 		93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00E1C49E42E0034486B /* ArchiveRecord.m */; };
 		93F2A01B1C49F6800034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -246,8 +246,8 @@
 		93DEA8501C4B8F73008211F7 /* UIColor+theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+theme.m"; sourceTree = "<group>"; };
 		93DEA8561C4B90F8008211F7 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
 		93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
-		93F2A0061C49E2380034486B /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
-		93F2A0071C49E2380034486B /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
+		93F2A0061C49E2380034486B /* UserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCache.h; sourceTree = "<group>"; };
+		93F2A0071C49E2380034486B /* UserCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCache.m; sourceTree = "<group>"; };
 		93F2A00A1C49E2F40034486B /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
 		93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		93F2A00D1C49E42E0034486B /* ArchiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveRecord.h; sourceTree = "<group>"; };
@@ -662,8 +662,8 @@
 			children = (
 				93F2A00D1C49E42E0034486B /* ArchiveRecord.h */,
 				93F2A00E1C49E42E0034486B /* ArchiveRecord.m */,
-				93F2A0061C49E2380034486B /* Cache.h */,
-				93F2A0071C49E2380034486B /* Cache.m */,
+				93F2A0061C49E2380034486B /* UserCache.h */,
+				93F2A0071C49E2380034486B /* UserCache.m */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -900,7 +900,7 @@
 				33F070D61C42BEEC00DAC58F /* MBProgressHUD.m in Sources */,
 				B5F385851C43750900E666F7 /* POPCustomAnimation.mm in Sources */,
 				B5F3857C1C43750900E666F7 /* POPAnimatableProperty.mm in Sources */,
-				93F2A0081C49E2380034486B /* Cache.m in Sources */,
+				93F2A0081C49E2380034486B /* UserCache.m in Sources */,
 				B5F3858A1C43750900E666F7 /* POPPropertyAnimation.mm in Sources */,
 				B5F3858D1C43750900E666F7 /* TransformationMatrix.cpp in Sources */,
 				33F071BF1C42CF5800DAC58F /* AFNetworkReachabilityManager.m in Sources */,

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 
-#import "Cache.h"
+#import "UserCache.h"
 
-@implementation Cache
+@implementation UserCache
 static NSString *const kUserIDStringKey = @"kUserIDStringKey";
 static NSString *const kSecondIDKey = @"kSecondIDKey";
 static NSString *const UDStorageUserID                      = @"StorageUserID";
@@ -18,7 +18,7 @@ static NSString *const KWStorageUsername                    = @"StorageUsername"
 static NSString *const KWStoragePassword                    = @"StoragePassword";
 static NSString *const KWStorageNickname                    = @"StorageNickname";
 
-SINGLETON_GCD(Cache);
+SINGLETON_GCD(UserCache);
 
 // 保存用户名和密码
 - (void)setUsername:(NSString *)username password:(NSString *)password {

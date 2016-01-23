@@ -64,7 +64,7 @@
 
 //Storage
 #import "ArchiveRecord.h"
-#import "Cache.h"
+#import "UserCache.h"
 
 #endif
 
