@@ -38,6 +38,7 @@
 #import "NSObject+SafeValueWithJSON.h"
 #import "NSJSONSerialization+Shortcuts.h"
 #import "UIColor+theme.h"
+#import "UIButton+Label.h"
 
 // Animations.
 #import "PresentTransitioningDelegate.h"

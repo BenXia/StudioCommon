@@ -73,6 +73,7 @@
 		33F071C21C42CF5800DAC58F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B71C42CF5800DAC58F /* AFURLRequestSerialization.m */; };
 		33F071C31C42CF5800DAC58F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */; };
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
+		9377AC5E1C535D35003B24B1 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 9377AC5B1C535D35003B24B1 /* UIButton+Label.m */; };
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
@@ -242,6 +243,8 @@
 		33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		33F071BA1C42CF5800DAC58F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		9377AC5A1C535D35003B24B1 /* UIButton+Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Label.h"; sourceTree = "<group>"; };
+		9377AC5B1C535D35003B24B1 /* UIButton+Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Label.m"; sourceTree = "<group>"; };
 		93DEA84F1C4B8F73008211F7 /* UIColor+theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+theme.h"; sourceTree = "<group>"; };
 		93DEA8501C4B8F73008211F7 /* UIColor+theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+theme.m"; sourceTree = "<group>"; };
 		93DEA8561C4B90F8008211F7 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
@@ -371,6 +374,7 @@
 		33F06FF11C424EE900DAC58F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9377AC591C535D35003B24B1 /* 按钮相关 */,
 				93DEA84D1C4B8F73008211F7 /* 调色板 */,
 				33F071361C42C55B00DAC58F /* 图片相关 */,
 				33F070E81C42C21900DAC58F /* 布局层次 */,
@@ -644,6 +648,15 @@
 				33F0719A1C42CE9700DAC58F /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		9377AC591C535D35003B24B1 /* 按钮相关 */ = {
+			isa = PBXGroup;
+			children = (
+				9377AC5A1C535D35003B24B1 /* UIButton+Label.h */,
+				9377AC5B1C535D35003B24B1 /* UIButton+Label.m */,
+			);
+			path = "按钮相关";
 			sourceTree = "<group>";
 		};
 		93DEA84D1C4B8F73008211F7 /* 调色板 */ = {
@@ -926,6 +939,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9377AC5E1C535D35003B24B1 /* UIButton+Label.m in Sources */,
 				93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */,
 				93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */,
 			);
