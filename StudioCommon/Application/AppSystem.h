@@ -1,8 +1,8 @@
 //
 //  AppSystem.h
-//  QQing
+//  StudioCommon
 //
-//  Created by 李杰 on 5/22/15.
+//  Created by Ben on 2/2/16.
 //
 //
 

@@ -72,7 +72,7 @@
     if (self = [super initWithFrame:frame]) {
         // 1.自己的属性
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        self.backgroundColor = customBaseViewBackgroundColor ? : [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1.0];
+        self.backgroundColor = customBaseViewBackgroundColor ? : [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1.0];
         
         // 2.设置默认状态
         self.state = MJRefreshStateNormal;

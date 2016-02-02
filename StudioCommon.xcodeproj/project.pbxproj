@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33DD6B571C60FB3600CE6B31 /* UIViewController+UINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B561C60FB3600CE6B31 /* UIViewController+UINavigationBar.m */; };
+		33DD6B5A1C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B591C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m */; };
+		33DD6B5D1C60FCCF00CE6B31 /* UIButton+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B5C1C60FCCF00CE6B31 /* UIButton+Theme.m */; };
+		33DD6BC01C61064700CE6B31 /* QQingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6BBF1C61064700CE6B31 /* QQingImageView.m */; };
+		33DD6BC41C61067300CE6B31 /* QQingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6BC31C61067300CE6B31 /* QQingProgressView.m */; };
 		33F070131C424EE900DAC58F /* NSBundle+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F06FF41C424EE900DAC58F /* NSBundle+Utility.m */; };
 		33F070141C424EE900DAC58F /* NSArray+ObjectAtIndexWithBoundsCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F06FF71C424EE900DAC58F /* NSArray+ObjectAtIndexWithBoundsCheck.m */; };
 		33F070151C424EE900DAC58F /* NSArray+SafeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F06FF91C424EE900DAC58F /* NSArray+SafeValue.m */; };
@@ -115,6 +120,16 @@
 
 /* Begin PBXFileReference section */
 		33C988881C42418A00262141 /* libStudioCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStudioCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		33DD6B551C60FB3600CE6B31 /* UIViewController+UINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UINavigationBar.h"; sourceTree = "<group>"; };
+		33DD6B561C60FB3600CE6B31 /* UIViewController+UINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UINavigationBar.m"; sourceTree = "<group>"; };
+		33DD6B581C60FBB600CE6B31 /* UINavigationItem+MultipleItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+MultipleItems.h"; sourceTree = "<group>"; };
+		33DD6B591C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+MultipleItems.m"; sourceTree = "<group>"; };
+		33DD6B5B1C60FCCF00CE6B31 /* UIButton+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Theme.h"; sourceTree = "<group>"; };
+		33DD6B5C1C60FCCF00CE6B31 /* UIButton+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Theme.m"; sourceTree = "<group>"; };
+		33DD6BBE1C61064700CE6B31 /* QQingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingImageView.h; sourceTree = "<group>"; };
+		33DD6BBF1C61064700CE6B31 /* QQingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingImageView.m; sourceTree = "<group>"; };
+		33DD6BC21C61067300CE6B31 /* QQingProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingProgressView.h; sourceTree = "<group>"; };
+		33DD6BC31C61067300CE6B31 /* QQingProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingProgressView.m; sourceTree = "<group>"; };
 		33F06FAC1C424A3200DAC58F /* StudioCommonBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudioCommonBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F06FAE1C424A3200DAC58F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F06FF31C424EE900DAC58F /* NSBundle+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Utility.h"; sourceTree = "<group>"; };
@@ -363,6 +378,35 @@
 			path = StudioCommon;
 			sourceTree = "<group>";
 		};
+		33DD6B541C60FB3600CE6B31 /* 导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				33DD6B581C60FBB600CE6B31 /* UINavigationItem+MultipleItems.h */,
+				33DD6B591C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m */,
+				33DD6B551C60FB3600CE6B31 /* UIViewController+UINavigationBar.h */,
+				33DD6B561C60FB3600CE6B31 /* UIViewController+UINavigationBar.m */,
+			);
+			path = "导航栏";
+			sourceTree = "<group>";
+		};
+		33DD6BBD1C61064700CE6B31 /* 远程图片 */ = {
+			isa = PBXGroup;
+			children = (
+				33DD6BBE1C61064700CE6B31 /* QQingImageView.h */,
+				33DD6BBF1C61064700CE6B31 /* QQingImageView.m */,
+			);
+			path = "远程图片";
+			sourceTree = "<group>";
+		};
+		33DD6BC11C61067300CE6B31 /* 进度显示 */ = {
+			isa = PBXGroup;
+			children = (
+				33DD6BC21C61067300CE6B31 /* QQingProgressView.h */,
+				33DD6BC31C61067300CE6B31 /* QQingProgressView.m */,
+			);
+			path = "进度显示";
+			sourceTree = "<group>";
+		};
 		33F06FAD1C424A3200DAC58F /* StudioCommonBundle */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +418,7 @@
 		33F06FF11C424EE900DAC58F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				33DD6B541C60FB3600CE6B31 /* 导航栏 */,
 				9377AC591C535D35003B24B1 /* 按钮相关 */,
 				93DEA84D1C4B8F73008211F7 /* 调色板 */,
 				33F071361C42C55B00DAC58F /* 图片相关 */,
@@ -562,6 +607,8 @@
 		33F071441C42C7B800DAC58F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33DD6BC11C61067300CE6B31 /* 进度显示 */,
+				33DD6BBD1C61064700CE6B31 /* 远程图片 */,
 				33F071451C42C7B800DAC58F /* 上下拉刷新 */,
 			);
 			path = Views;
@@ -653,6 +700,8 @@
 		9377AC591C535D35003B24B1 /* 按钮相关 */ = {
 			isa = PBXGroup;
 			children = (
+				33DD6B5B1C60FCCF00CE6B31 /* UIButton+Theme.h */,
+				33DD6B5C1C60FCCF00CE6B31 /* UIButton+Theme.m */,
 				9377AC5A1C535D35003B24B1 /* UIButton+Label.h */,
 				9377AC5B1C535D35003B24B1 /* UIButton+Label.m */,
 			);
@@ -883,6 +932,7 @@
 				B5F3857F1C43750900E666F7 /* POPAnimationExtras.mm in Sources */,
 				33F071431C42C6CC00DAC58F /* NSString+Size.m in Sources */,
 				33F071581C42C7B800DAC58F /* MJRefreshFooterView.m in Sources */,
+				33DD6BC01C61064700CE6B31 /* QQingImageView.m in Sources */,
 				B5F3857D1C43750900E666F7 /* POPAnimation.mm in Sources */,
 				33F071351C42C4DA00DAC58F /* UIUtils.m in Sources */,
 				33F070161C424EE900DAC58F /* NSDictionary+SafeValue.m in Sources */,
@@ -902,6 +952,7 @@
 				33F070E61C42C15900DAC58F /* GCDQueue.m in Sources */,
 				33F071C11C42CF5800DAC58F /* AFURLConnectionOperation.m in Sources */,
 				33F0715C1C42C7B800DAC58F /* UIView+Extension.m in Sources */,
+				33DD6BC41C61067300CE6B31 /* QQingProgressView.m in Sources */,
 				33F0713B1C42C55B00DAC58F /* UIImage+Blur.m in Sources */,
 				B5F385881C43750900E666F7 /* POPLayerExtras.mm in Sources */,
 				33F071A01C42CE9700DAC58F /* UIImageView+AFNetworking.m in Sources */,
@@ -924,9 +975,12 @@
 				33F071591C42C7B800DAC58F /* MJRefreshHeaderView.m in Sources */,
 				33F070C71C42B83700DAC58F /* NSURL+Additions.m in Sources */,
 				33F070141C424EE900DAC58F /* NSArray+ObjectAtIndexWithBoundsCheck.m in Sources */,
+				33DD6B5D1C60FCCF00CE6B31 /* UIButton+Theme.m in Sources */,
 				33F070DA1C42BF2800DAC58F /* Utilities.m in Sources */,
+				33DD6B571C60FB3600CE6B31 /* UIViewController+UINavigationBar.m in Sources */,
 				B5F385841C43750900E666F7 /* POPCGUtils.mm in Sources */,
 				33F070A21C42B6FC00DAC58F /* NSDate+Utilities.m in Sources */,
+				33DD6B5A1C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m in Sources */,
 				33F071A21C42CE9700DAC58F /* UIRefreshControl+AFNetworking.m in Sources */,
 				33F071BD1C42CF5800DAC58F /* AFHTTPRequestOperationManager.m in Sources */,
 				B5F385801C43750900E666F7 /* POPAnimationRuntime.mm in Sources */,

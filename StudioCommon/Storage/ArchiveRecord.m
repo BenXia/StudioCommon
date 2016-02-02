@@ -1,6 +1,6 @@
 //
 //  ArchiveRecord.m
-//  QQing
+//  StudioCommon
 //
 //  Created by 王涛 on 16/1/16.
 //

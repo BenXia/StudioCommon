@@ -1,8 +1,8 @@
 //
 //  UIColor+theme.m
-//  QQing
+//  StudioCommon
 //
-//  Created by 李杰 on 1/22/15.
+//  Created by Ben on 2/2/16.
 //
 //
 
@@ -11,8 +11,17 @@
 
 @implementation UIColor (theme)
 
-#pragma mark - 颜色规范
-#pragma mark - 基准色
+// ===============================================
+// 全局用色：主题色、辅助色
+// ===============================================
+
++ (UIColor *)themeBlueColor {
+    return [UIColor colorWithRed:56.0/255 green:115.0/255 blue:181.0/255 alpha:1];
+}
+
++ (UIColor *)themeCyanColor {
+    return [UIColor colorWithRed:61.0/255 green:183.0/255 blue:235.0/255 alpha:1];
+}
 
 // ===============================================
 // 全局用色：灰色系
@@ -50,73 +59,6 @@
 
 + (UIColor *)gray007Color {
     return [UIColor colorWithRGBHex:0x333333];
-}
-
-// ===============================================
-// 全局用色：主题色、辅助色
-
-// st：家长端
-// te：老师端
-// ===============================================
-
-+ (UIColor *)stGreenColor {
-    return [UIColor colorWithRGBHex:0x54ae37];
-}
-
-+ (UIColor *)stOrangeColor {
-    return [UIColor colorWithRGBHex:0xff6600];
-}
-
-+ (UIColor *)stBlueColor {
-    return [UIColor colorWithRGBHex:0x47abef];
-}
-
-+ (UIColor *)stYellowColor {
-    return [UIColor colorWithRGBHex:0xffcc00];
-}
-
-+ (UIColor *)stRedColor {
-    return [UIColor colorWithRGBHex:0xdb2440];
-}
-
-+ (UIColor *)teGreenColor {
-    return [UIColor colorWithRGBHex:0x6cb952];
-}
-
-+ (UIColor *)teOrangeColor {
-    return [UIColor colorWithRGBHex:0xff6600];
-}
-
-+ (UIColor *)teBlueColor {
-    return [UIColor colorWithRGBHex:0x2C5DA6];
-}
-
-+ (UIColor *)teYellowColor {
-    return [UIColor colorWithRGBHex:0xff9900];
-}
-
-+ (UIColor *)teRedColor {
-    return [UIColor colorWithRGBHex:0xdb2440];
-}
-
-+ (UIColor *)taGreenColor {
-    return [UIColor colorWithRGBHex:0x6cb952];
-}
-
-+ (UIColor *)taOrangeColor {
-    return [UIColor colorWithRGBHex:0xff9900];
-}
-
-+ (UIColor *)taBlueColor {
-    return [UIColor colorWithRGBHex:0x496eda];
-}
-
-+ (UIColor *)taYellowColor {
-    return [UIColor colorWithRGBHex:0xff9900];
-}
-
-+ (UIColor *)taRedColor {
-    return [UIColor colorWithRGBHex:0xdb2440];
 }
 
 // ===============================================
@@ -188,7 +130,7 @@
 }
 
 + (UIColor *)fontBlueColor {
-    return [UIColor teBlueColor];
+    return [UIColor themeBlueColor];
 }
 
 + (UIColor *)fontGray_one_Color_deprecated {
@@ -208,52 +150,10 @@
 
 #pragma mark - 命名色
 
-+ (UIColor *)themeColor {
-    return nil;
++ (UIColor *)backGroundGrayColor {
+    return [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1.0];
 }
 
-// Theme
-+ (UIColor *)themePinkColor {
-    return [UIColor colorWithRed:255.0/255 green:125.0/255 blue:140.0/255 alpha:1.0];
-}
-
-+ (UIColor *)themePurpleColor {
-    return [UIColor colorWithRed:182.0/255 green:152.0/255 blue:223.0/255 alpha:1.0];
-}
-
-+ (UIColor *)themeGreenColor {
-    return nil;
-}
-
-+ (UIColor *)themeOrangeColor {
-    return nil;
-}
-
-+ (UIColor *)themeBlueColor {
-    return nil;
-}
-
-+ (UIColor *)themeYellowColor {
-    return nil;
-}
-
-+ (UIColor *)themeRedColor {
-    return nil;
-}
-
-+ (UIColor *)themeGreenTwoColor {
-    return [UIColor colorWithRed:(140.0f / 255.0f) green:(200.0f / 255.0f) blue:(68.0f / 255.0f) alpha:1.0f];
-}
-
-+ (UIColor *)themeGreenColorWithAlpha:(CGFloat)alpha {
-    return [UIColor colorWithRed:(140.0f / 255.0f) green:(185.0f / 255.0f) blue:(82.0f / 255.0f) alpha:alpha];
-}
-
-+ (UIColor *)themeBlueColorWithAlpha:(CGFloat)alpha {
-    return [UIColor colorWithRed:(57.0f / 255.0f) green:(106.0f / 255.0f) blue:(180.0f / 255.0f) alpha:alpha];
-}
-
-// background color
 + (UIColor *)bottomToolBarBackgroundColor {
     return [UIColor gray000Color];
 }
@@ -275,106 +175,11 @@
 }
 
 + (UIColor *)frontTopBarBackgroundColor {
-    return [UIColor themeGreenColor];
+    return [UIColor themeBlueColor];
 }
 
 + (UIColor *)buttonDisableStateColor {
     return [UIColor gray004Color];
-}
-
-#pragma mark - 颜色预定义
-
-// ====
-+ (UIColor *)goodAppraiseColor {
-    return [UIColor colorWithRed:1.0f green:0.4f blue:0.0f alpha:1.0f];
-}
-
-+ (UIColor *)normalAppraiseColor {
-    return [UIColor colorWithRed:1.0f green:0.6f blue:0.2f alpha:1.0f];
-}
-
-+ (UIColor *)badAppraiseColor {
-    return [self gray005Color];
-}
-
-// ====
-+ (UIColor *)webViewNavigationBarBackgroundColor {
-    return [UIColor colorWithRed:247.0/255 green:248.0/255 blue:247.0/255 alpha:1.0];
-}
-
-+ (UIColor *)backGroundGrayColor {
-    
-    return [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1.0];
-}
-
-// ====
-+ (UIColor *)navigationBarTintColor {
-    return [UIColor colorWithRed:051/255 green:051/255 blue:051/255 alpha:1.0f];
-}
-
-+ (UIColor *)textDarkGreenColor {
-    return [UIColor colorWithRed:(71.0f / 255.0f) green:(129.0f / 255.0f) blue:(52.0f / 255.0f) alpha:1.0f];
-}
-
-// ====
-+ (UIColor *)sscourseCellBorderColor {
-    return [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1.0];
-}
-
-+(UIColor *)sscourseNewCellBorderColor {
-    return [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
-}
-
-+ (UIColor *)sscourseCellContentColor {
-    return [UIColor colorWithRed:240/255.0 green:239/255.0 blue:240/255.0 alpha:1.0];
-}
-
-// ====
-+ (UIColor *)colorOnTouched {
-    return [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1.0];
-}
-
-+ (UIColor *)colorOnSelected {
-    return [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1.0];
-}
-
-// ====
-+ (UIColor *)schePurpleColor {
-    return [UIColor colorWithRed:0.5 green:0.0 blue:0.5 alpha:1.0];
-}
-
-+ (UIColor *)schePurpleColorWithAlpha:(CGFloat)alpha {
-    return [UIColor colorWithRed:0.5 green:0.0 blue:0.5 alpha:alpha];
-}
-
-// ===
-+ (UIColor *)yellowColor_1 {
-    return [UIColor colorWithRed:241.0/255 green:100.0/255 blue:43.0/255 alpha:1.0];
-}
-
-+ (UIColor *)courseDetailBottomBarColor{
-    return [UIColor colorWithRed:248.0/255 green:248.0/255 blue:248.0/255 alpha:1.0];
-}
-
-// ====
-+ (UIColor *)courseEdColor {
-    return [UIColor gray004Color];
-}
-
-+ (UIColor *)courseIngColor {
-    return [UIColor themeBlueColor];
-}
-
-+ (UIColor *)courseWillColor {
-    return [UIColor themeGreenColor];
-}
-
-+ (UIColor *)courseWaitColor {
-    return [UIColor themePinkColor];
-}
-
-+ (UIColor *)courseDealingColor {
-    return [UIColor gray005Color];
 }
 
 @end

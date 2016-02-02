@@ -1,9 +1,9 @@
 //
 //  UIButton+Label.m
-//  ButtonDemo
+//  StudioCommon
 //
-//  Created by wyp on 15/3/21.
-//  Copyright (c) 2015年 wyp. All rights reserved.
+//  Created by Ben on 2/2/16.
+//
 //
 
 #import "UIButton+Label.h"

@@ -1,8 +1,8 @@
 //
 //  UIColor+theme.h
-//  QQing
+//  StudioCommon
 //
-//  Created by 李杰 on 1/22/15.
+//  Created by Ben on 2/2/16.
 //
 //
 
@@ -11,7 +11,14 @@
 @interface UIColor (theme)
 
 #pragma mark - 颜色规范
-#pragma mark - 基准色
+
+// ===============================================
+// 全局用色：主题色、辅助色
+// ===============================================
+
++ (UIColor *)themeBlueColor;
+
++ (UIColor *)themeCyanColor;
 
 // ===============================================
 // 全局用色：灰色系
@@ -28,41 +35,12 @@
 + (UIColor *)gray007Color;
 
 // ===============================================
-// 全局用色：主题色、辅助色
-
-// st：家长端
-// te：老师端
-// ta：助教端
-
-// Notice: 可能不同的端对同一种颜色，色值定义不同
-// ===============================================
-
-+ (UIColor *)stGreenColor;
-+ (UIColor *)stOrangeColor;
-+ (UIColor *)stBlueColor;
-+ (UIColor *)stYellowColor;
-+ (UIColor *)stRedColor;
-
-+ (UIColor *)teGreenColor;
-+ (UIColor *)teOrangeColor;
-+ (UIColor *)teBlueColor;
-+ (UIColor *)teYellowColor;
-+ (UIColor *)teRedColor;
-
-+ (UIColor *)taGreenColor;
-+ (UIColor *)taOrangeColor;
-+ (UIColor *)taBlueColor;
-+ (UIColor *)taYellowColor;
-+ (UIColor *)taRedColor;
-
-// ===============================================
 // 背景用色
 // ===============================================
 
 + (UIColor *)bgGray000Color;
 + (UIColor *)bgGray001Color;
 + (UIColor *)bgGray002Color;
-+ (UIColor *)bgGreenColor;
 
 // ===============================================
 // 分割线用色
@@ -82,63 +60,22 @@
 + (UIColor *)fontGray007Color; // gray007       font 4
 
 + (UIColor *)fontWhiteColor;
-+ (UIColor *)fontBlackColor; // title
++ (UIColor *)fontBlackColor;    // title
 + (UIColor *)fontGreenColor;    //              font 5
 + (UIColor *)fontOrangeColor;   //              font 6
 + (UIColor *)fontBlueColor;
 
-#pragma mark - 命名色
+// ===============================================
+// 命名色
+// ===============================================
 
-+ (UIColor *)themeColor;
-
-/**
- *  主题色
- */
-+ (UIColor *)themePinkColor;    // 系统、主题 粉红
-+ (UIColor *)themePurpleColor;  // 系统、主题 紫色
-
-+ (UIColor *)themeGreenColor;   // 系统、主题 绿色
-+ (UIColor *)themeOrangeColor;  // 系统、主题 橙色
-+ (UIColor *)themeBlueColor;    // 系统、主题 蓝色
-+ (UIColor *)themeBlueColorWithAlpha:(CGFloat)alpha;
-+ (UIColor *)themeYellowColor;  // 系统、主题 黄色
-+ (UIColor *)themeRedColor;     // 系统、主题 红色
-
-+ (UIColor *)themeGreenTwoColor;
-+ (UIColor *)themeGreenColorWithAlpha:(CGFloat)alpha;
-
-/**
- *  背景用色
- */
-+ (UIColor *)bottomToolBarBackgroundColor;      // 【背景1】白white-底部工具栏、列表背景色
-+ (UIColor *)cellBackgroundColor;
-
-+ (UIColor *)topBarBackgroundColor;             // 【背景2】灰1 grey 1-顶部导航栏
-+ (UIColor *)bottomBarBackgroundColor;
-
-+ (UIColor *)viewBackgroundColor;               // 【背景3】灰2 grey 2-整体背景色
-+ (UIColor *)frontTopBarBackgroundColor;        // 【背景4】绿色green-五个大栏目顶部导航栏
-
-+ (UIColor *)buttonDisableStateColor;           // gray004
-
-//背景灰
-+ (UIColor *)webViewNavigationBarBackgroundColor;
 + (UIColor *)backGroundGrayColor;
-
-// 导航栏颜色风格
-+ (UIColor *)navigationBarTintColor;
-+ (UIColor *)textDarkGreenColor;
-
-/**
- * 自定义view，按下态等
- */
-+ (UIColor *)colorOnTouched;
-+ (UIColor *)colorOnSelected;
-
-/**
- * 课程详情底部按钮栏背景色
- */
-+ (UIColor *)courseDetailBottomBarColor;
-
++ (UIColor *)bottomToolBarBackgroundColor;
++ (UIColor *)cellBackgroundColor;
++ (UIColor *)topBarBackgroundColor;
++ (UIColor *)bottomBarBackgroundColor;
++ (UIColor *)viewBackgroundColor;
++ (UIColor *)frontTopBarBackgroundColor;
++ (UIColor *)buttonDisableStateColor;
 
 @end
