@@ -42,6 +42,7 @@
 #import "UIButton+Theme.h"
 #import "UINavigationItem+MultipleItems.h"
 #import "UIViewController+UINavigationBar.h"
+#import "UITableViewCell+Base.h"
 
 // Animations.
 #import "PresentTransitioningDelegate.h"

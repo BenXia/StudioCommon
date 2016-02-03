@@ -22,38 +22,59 @@ SINGLETON_GCD(UserCache);
 
 // 保存用户名和密码
 - (void)setUsername:(NSString *)username password:(NSString *)password {
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    [keychainStore removeItemForKey:KWStorageUsername];
-    [keychainStore removeItemForKey:KWStoragePassword];
-    [keychainStore setString:username forKey:KWStorageUsername];
-    [keychainStore setString:password forKey:KWStoragePassword];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    [keychainStore removeItemForKey:KWStorageUsername];
+//    [keychainStore removeItemForKey:KWStoragePassword];
+//    [keychainStore setString:username forKey:KWStorageUsername];
+//    [keychainStore setString:password forKey:KWStoragePassword];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud removeObjectForKey:KWStorageUsername];
+    [ud removeObjectForKey:KWStoragePassword];
+    [ud setObject:username forKey:KWStorageUsername];
+    [ud setObject:password forKey:KWStoragePassword];
+    [ud synchronize];
 }
 
 - (void)setUsername:(NSString *)username {
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    [keychainStore removeItemForKey:KWStorageUsername];
-    [keychainStore setString:username forKey:KWStorageUsername];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    [keychainStore removeItemForKey:KWStorageUsername];
+//    [keychainStore setString:username forKey:KWStorageUsername];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud removeObjectForKey:KWStorageUsername];
+    [ud setObject:username forKey:KWStorageUsername];
+    [ud synchronize];
 }
 
 - (NSString *)username {
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    return [keychainStore stringForKey:KWStorageUsername];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    return [keychainStore stringForKey:KWStorageUsername];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return [ud objectForKey:KWStorageUsername];
 }
 
 - (NSString *)password {
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    return [keychainStore stringForKey:KWStoragePassword];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    return [keychainStore stringForKey:KWStoragePassword];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return [ud objectForKey:KWStoragePassword];
 }
 
 - (void)setNickname:(NSString *)nickname{
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    [keychainStore removeItemForKey:KWStorageUsername];
-    [keychainStore setString:nickname forKey:KWStorageNickname];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    [keychainStore removeItemForKey:KWStorageUsername];
+//    [keychainStore setString:nickname forKey:KWStorageNickname];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud removeObjectForKey:KWStorageNickname];
+    [ud setObject:nickname forKey:KWStorageNickname];
+    [ud synchronize];
 }
 
 - (NSString *)nickname {
-    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
-    return [keychainStore stringForKey:KWStorageUsername];
+//    UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
+//    return [keychainStore stringForKey:KWStorageUsername];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return [ud objectForKey:KWStorageNickname];
 }
 
 - (void)setUserID:(long long)userID {
