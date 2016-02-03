@@ -3,8 +3,9 @@
 //  StudioCommon
 //
 //  Created by Ben on 5/22/15.
+//  Copyright © 2016年 iOSStudio. All rights reserved.
 //
-//
+
 #include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
 #include <net/if.h>

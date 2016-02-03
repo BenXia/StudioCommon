@@ -3,7 +3,7 @@
 //  StudioCommon
 //
 //  Created by Ben on 8/7/15.
-//  Copyright (c) 2014 QQing. All rights reserved.
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 
 #import "QQingProgressView.h"
 

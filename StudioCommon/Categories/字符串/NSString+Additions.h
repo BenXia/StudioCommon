@@ -1,9 +1,9 @@
 //
 //  NSString+Additions.h
-//  TuanGouForZuiTu
+//  StudioCommon
 //
-//  Created by Qian GuoQiang on 10-10-13.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Ben on 1/10/16.
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

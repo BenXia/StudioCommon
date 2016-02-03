@@ -3,7 +3,7 @@
 //  StudioCommon
 //
 //  Created by Ben on 1/10/16.
-//
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #import "Utilities.h"

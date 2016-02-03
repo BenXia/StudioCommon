@@ -3,7 +3,7 @@
 //  StudioCommon
 //
 //  Created by Ben on 2/2/16.
-//
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #import "UIButton+Theme.h"
