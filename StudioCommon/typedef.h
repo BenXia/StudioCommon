@@ -3,7 +3,7 @@
 //  StudioCommon
 //
 //  Created by Ben on 1/22/15.
-//
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #ifndef StudioCommon_typedef_h

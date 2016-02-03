@@ -3,7 +3,7 @@
 //  StudioCommon
 //
 //  Created by Ben on 1/26/15.
-//
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #ifndef StudioCommon_macrodef_h
@@ -132,5 +132,10 @@ NULL]];\
 #define QQIPHONEBELOW_6             ([UIScreen width] == 320)
 #define QQIPHONE_6                  ([UIScreen width] == 375)
 #define QQIPHONE_6P                 ([UIScreen width] == 414)
+
+// 特殊数值
+
+#undef UNDEFINED_STRING
+#define UNDEFINED_STRING @"未定义"
 
 #endif
