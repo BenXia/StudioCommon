@@ -123,6 +123,7 @@
 		33F071C31C42CF5800DAC58F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */; };
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
 		9377AC5E1C535D35003B24B1 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 9377AC5B1C535D35003B24B1 /* UIButton+Label.m */; };
+		9379D39B1C631D6800390702 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 9377AC5B1C535D35003B24B1 /* UIButton+Label.m */; };
 		93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */; };
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -1454,6 +1455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9379D39B1C631D6800390702 /* UIButton+Label.m in Sources */,
 				93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */,
 				93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */,
 				33D00FB11C6239DD00499EE9 /* APAuthV2Info.m in Sources */,
