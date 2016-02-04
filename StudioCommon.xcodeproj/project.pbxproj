@@ -51,6 +51,7 @@
 		33D010291C62427B00499EE9 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D0101E1C62427B00499EE9 /* DDDispatchQueueLogFormatter.m */; };
 		33D0102A1C62427B00499EE9 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D010201C62427B00499EE9 /* DDMultiFormatter.m */; };
 		33D0102D1C6243F700499EE9 /* CommonErrorDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D0102C1C6243F700499EE9 /* CommonErrorDef.m */; };
+		33D31FB21C62EE8A00EB69E1 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D31FB11C62EE8A00EB69E1 /* UIButton+Label.m */; };
 		33DD6B571C60FB3600CE6B31 /* UIViewController+UINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B561C60FB3600CE6B31 /* UIViewController+UINavigationBar.m */; };
 		33DD6B5A1C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B591C60FBB600CE6B31 /* UINavigationItem+MultipleItems.m */; };
 		33DD6B5D1C60FCCF00CE6B31 /* UIButton+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD6B5C1C60FCCF00CE6B31 /* UIButton+Theme.m */; };
@@ -122,8 +123,6 @@
 		33F071C21C42CF5800DAC58F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B71C42CF5800DAC58F /* AFURLRequestSerialization.m */; };
 		33F071C31C42CF5800DAC58F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */; };
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
-		9377AC5E1C535D35003B24B1 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 9377AC5B1C535D35003B24B1 /* UIButton+Label.m */; };
-		9379D39B1C631D6800390702 /* UIButton+Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 9377AC5B1C535D35003B24B1 /* UIButton+Label.m */; };
 		93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */; };
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -340,6 +339,8 @@
 		33D010201C62427B00499EE9 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
 		33D0102B1C6243F700499EE9 /* CommonErrorDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonErrorDef.h; sourceTree = "<group>"; };
 		33D0102C1C6243F700499EE9 /* CommonErrorDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonErrorDef.m; sourceTree = "<group>"; };
+		33D31FB01C62EE8A00EB69E1 /* UIButton+Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Label.h"; sourceTree = "<group>"; };
+		33D31FB11C62EE8A00EB69E1 /* UIButton+Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Label.m"; sourceTree = "<group>"; };
 		33DD6B551C60FB3600CE6B31 /* UIViewController+UINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UINavigationBar.h"; sourceTree = "<group>"; };
 		33DD6B561C60FB3600CE6B31 /* UIViewController+UINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UINavigationBar.m"; sourceTree = "<group>"; };
 		33DD6B581C60FBB600CE6B31 /* UINavigationItem+MultipleItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+MultipleItems.h"; sourceTree = "<group>"; };
@@ -478,8 +479,6 @@
 		33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		33F071BA1C42CF5800DAC58F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		9377AC5A1C535D35003B24B1 /* UIButton+Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Label.h"; sourceTree = "<group>"; };
-		9377AC5B1C535D35003B24B1 /* UIButton+Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Label.m"; sourceTree = "<group>"; };
 		93A1F5BC1C625A4F00CFEEC4 /* UITableViewCell+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Base.h"; sourceTree = "<group>"; };
 		93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Base.m"; sourceTree = "<group>"; };
 		93DEA84F1C4B8F73008211F7 /* UIColor+theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+theme.h"; sourceTree = "<group>"; };
@@ -1236,10 +1235,10 @@
 		9377AC591C535D35003B24B1 /* 按钮相关 */ = {
 			isa = PBXGroup;
 			children = (
+				33D31FB01C62EE8A00EB69E1 /* UIButton+Label.h */,
+				33D31FB11C62EE8A00EB69E1 /* UIButton+Label.m */,
 				33DD6B5B1C60FCCF00CE6B31 /* UIButton+Theme.h */,
 				33DD6B5C1C60FCCF00CE6B31 /* UIButton+Theme.m */,
-				9377AC5A1C535D35003B24B1 /* UIButton+Label.h */,
-				9377AC5B1C535D35003B24B1 /* UIButton+Label.m */,
 			);
 			path = "按钮相关";
 			sourceTree = "<group>";
@@ -1455,7 +1454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9379D39B1C631D6800390702 /* UIButton+Label.m in Sources */,
 				93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */,
 				93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */,
 				33D00FB11C6239DD00499EE9 /* APAuthV2Info.m in Sources */,
@@ -1485,6 +1483,7 @@
 				33F070EB1C42C21900DAC58F /* UIView+Hierarchy.m in Sources */,
 				33F070E51C42C15900DAC58F /* GCDGroup.m in Sources */,
 				33D010251C62427B00499EE9 /* DDFileLogger.m in Sources */,
+				33D31FB21C62EE8A00EB69E1 /* UIButton+Label.m in Sources */,
 				B5F3857E1C43750900E666F7 /* POPAnimationEvent.mm in Sources */,
 				33D010281C62427B00499EE9 /* DDContextFilterLogFormatter.m in Sources */,
 				33D010041C6241F600499EE9 /* NSString+Extension.m in Sources */,
@@ -1581,7 +1580,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9377AC5E1C535D35003B24B1 /* UIButton+Label.m in Sources */,
 				93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */,
 				93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */,
 			);
