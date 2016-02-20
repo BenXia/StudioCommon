@@ -123,6 +123,8 @@
 		33F071C21C42CF5800DAC58F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B71C42CF5800DAC58F /* AFURLRequestSerialization.m */; };
 		33F071C31C42CF5800DAC58F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */; };
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
+		930C34211C77FD85008823F9 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34201C77FD85008823F9 /* ImageUtil.m */; };
+		930C34241C7804B3008823F9 /* PictureUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34231C7804B3008823F9 /* PictureUploader.m */; };
 		93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */; };
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -479,6 +481,10 @@
 		33F071B91C42CF5800DAC58F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		33F071BA1C42CF5800DAC58F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		930C341F1C77FD85008823F9 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		930C34201C77FD85008823F9 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		930C34221C7804B3008823F9 /* PictureUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureUploader.h; sourceTree = "<group>"; };
+		930C34231C7804B3008823F9 /* PictureUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureUploader.m; sourceTree = "<group>"; };
 		93A1F5BC1C625A4F00CFEEC4 /* UITableViewCell+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Base.h"; sourceTree = "<group>"; };
 		93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Base.m"; sourceTree = "<group>"; };
 		93DEA84F1C4B8F73008211F7 /* UIColor+theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+theme.h"; sourceTree = "<group>"; };
@@ -1096,10 +1102,14 @@
 		33F070D71C42BF2800DAC58F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				930C341F1C77FD85008823F9 /* ImageUtil.h */,
+				930C34201C77FD85008823F9 /* ImageUtil.m */,
 				33F071331C42C4DA00DAC58F /* UIUtils.h */,
 				33F071341C42C4DA00DAC58F /* UIUtils.m */,
 				33F070D81C42BF2800DAC58F /* Utilities.h */,
 				33F070D91C42BF2800DAC58F /* Utilities.m */,
+				930C34221C7804B3008823F9 /* PictureUploader.h */,
+				930C34231C7804B3008823F9 /* PictureUploader.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1465,6 +1475,7 @@
 				33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */,
 				33D00FD91C623C2300499EE9 /* ComponentWechatPay_Order.m in Sources */,
 				33F071C01C42CF5800DAC58F /* AFSecurityPolicy.m in Sources */,
+				930C34241C7804B3008823F9 /* PictureUploader.m in Sources */,
 				33F070761C42A98400DAC58F /* PresentTransitioningDelegate.m in Sources */,
 				B5F385811C43750900E666F7 /* POPAnimationTracer.mm in Sources */,
 				33F0719F1C42CE9700DAC58F /* UIButton+AFNetworking.m in Sources */,
@@ -1533,6 +1544,7 @@
 				B5F385831C43750900E666F7 /* POPBasicAnimation.mm in Sources */,
 				33F070151C424EE900DAC58F /* NSArray+SafeValue.m in Sources */,
 				33D00FE41C623F0100499EE9 /* NSObject+Package.m in Sources */,
+				930C34211C77FD85008823F9 /* ImageUtil.m in Sources */,
 				33D00FF11C623F6500499EE9 /* NSArray+Extension.m in Sources */,
 				33F0719C1C42CE9700DAC58F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				33F070D61C42BEEC00DAC58F /* MBProgressHUD.m in Sources */,

@@ -77,6 +77,8 @@
 // Utiliy.
 #import "UIUtils.h"
 #import "Utilities.h"
+#import "ImageUtil.h"
+#import "PictureUploader.h"
 
 // Pods.
 #import "ReactiveCocoa.h"
