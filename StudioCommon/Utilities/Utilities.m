@@ -341,11 +341,21 @@ SINGLETON_GCD(Utilities);
 
 // 检查相册权限
 + (BOOL)checkPhotoLibraryAccess {
-    ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-    if(authStatus == ALAuthorizationStatusRestricted || authStatus == ALAuthorizationStatusDenied){
-        return NO;
+    if (floor(NSFoundationVersionNumber) > floor(1047.25)) { // iOS 8+
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        if ((status == PHAuthorizationStatusDenied) || (status == PHAuthorizationStatusRestricted)) {
+            return NO;
+        } else {
+            return YES;
+        }
+    } else {
+        ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
+        if ((author == ALAuthorizationStatusDenied) || (author == ALAuthorizationStatusRestricted)) {
+            return NO;
+        } else {
+            return YES;
+        }
     }
-    return YES;
 }
 
 #pragma mark - UIGestureRecognizerDelegate
