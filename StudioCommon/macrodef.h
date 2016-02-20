@@ -61,14 +61,24 @@ return __singleton__; \
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]]; \
 }
 
-//检查系统版本
+// 设备判断
+#define IS_IPAD         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE       (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define VERTICAL_SCREEN_HEIGHT MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)
+#define VERTICAL_SCREEN_WIDTH  MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)
+#define IS_IPHONE_5     (IS_IPHONE && (VERTICAL_SCREEN_HEIGHT == 568.f))
+#define IS_IPHONE_4     (IS_IPHONE && (VERTICAL_SCREEN_HEIGHT == 480.f))
+#define IS_IPHONE_6     (IS_IPHONE && (VERTICAL_SCREEN_HEIGHT == 667.f))
+#define IS_IPHONE_6P    (IS_IPHONE && (VERTICAL_SCREEN_HEIGHT == 736.f))
+
+// 检查系统版本
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-//系统版本
+// 系统版本
 #define SYSTEM_VERSION  [[UIDevice currentDevice].systemVersion doubleValue]
 
 // Log
