@@ -19,6 +19,10 @@
     return [UIColor colorWithRed:56.0/255 green:115.0/255 blue:181.0/255 alpha:1];
 }
 
++ (UIColor *)themeButtonBlueColor {
+    return [UIColor colorWithRGBHex:0x33A7E4];
+}
+
 + (UIColor *)themeCyanColor {
     return [UIColor colorWithRed:61.0/255 green:183.0/255 blue:235.0/255 alpha:1];
 }
