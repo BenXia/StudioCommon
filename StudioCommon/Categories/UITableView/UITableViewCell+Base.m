@@ -1,9 +1,9 @@
 //
 //  UITableViewCell+Base.m
-//  QQingCommon
+//  StudioCommon
 //
-//  Created by 李杰 on 9/15/15.
-//  Copyright (c) 2015 QQingiOSTeam. All rights reserved.
+//  Created by Ben on 2/3/16.
+//  Copyright © 2016年 StudioCommon. All rights reserved.
 //
 
 #import "UITableViewCell+Base.h"
