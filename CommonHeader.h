@@ -40,6 +40,8 @@
 #import "NSData+Additions.h"
 #import "UIView+Hierarchy.h"
 #import "UIView+Extension.h"
+#import "UIView+Frame.h"
+#import "UILabel+Size.h"
 #import "UIImage+Blur.h"
 #import "UIImage+Utility.h"
 #import "NSObject+SafeValueWithJSON.h"
