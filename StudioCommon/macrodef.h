@@ -148,4 +148,6 @@ NULL]];\
 #undef UNDEFINED_STRING
 #define UNDEFINED_STRING @"未定义"
 
+#define kYuanSymbolStr   @"￥"
+
 #endif
