@@ -43,6 +43,8 @@
 - (void)setToken:(NSString *)token;
 - (NSString *)token;
 
+- (NSString *)md5;
+- (void)setMd5:(NSString *)md5;
 
 // 用户手动退出或被踢后清除用户相关信息
 - (void)resetUser;
