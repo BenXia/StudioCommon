@@ -69,6 +69,9 @@
 // 修改左右按钮Highlighted标题颜色
 - (UIColor *)preferNavBarHighlightedTitleColor;
 
+// 修改导航栏返回按钮标题
+- (NSString*)preferNavBackButtonTitle;
+
 #pragma mark - Navigation
 
 - (void)pushVC:(UIViewController *)vc animate:(BOOL)animate;

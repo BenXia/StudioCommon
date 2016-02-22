@@ -28,8 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavLeftItemWithImage:@"btn_back_white" target:self action:@selector(didClickOnBackButton)];
-
+    
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
@@ -57,6 +56,15 @@
     UIColor* preferNavItemHighlightedTitleColor = [self preferNavBarHighlightedTitleColor];
     if (preferNavItemHighlightedTitleColor) {
         self.navItemHighlightedTitleColor = preferNavItemHighlightedTitleColor;
+    }
+    
+    NSString* preferNavBackTitle = [self preferNavBackButtonTitle];
+    if (preferNavBackTitle.length > 0) {
+        [self setNavBackButtonWithTitle:preferNavBackTitle];
+    }else{
+        if (self != [self.navigationController.viewControllers firstObject]) {
+            [self setNavLeftItemWithImage:@"btn_back_white" target:self action:@selector(didClickOnBackButton)];
+        }
     }
 }
 
@@ -99,14 +107,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - Play with view model: overrided if needed
 
@@ -137,14 +145,26 @@
 #pragma mark - NavigationBar style
 
 - (UIColor *)preferNavBarBackgroundColor{
-    return nil;
+    return [UIColor themeBlueColor];
 }
 
 - (UIColor *)preferNavBarNormalTitleColor{
-    return nil;
+    return [UIColor whiteColor];
 }
 
 - (UIColor *)preferNavBarHighlightedTitleColor {
+    return [UIColor whiteColor];
+}
+
+- (NSString*)preferNavBackButtonTitle{
+    if ([self.navigationController.viewControllers containsObject:self]) {
+        NSInteger lastVCIndex = [self.navigationController.viewControllers indexOfObject:self] - 1;
+        if (lastVCIndex >= 0) {
+            UIViewController* lastVC = [self.navigationController.viewControllers objectAtIndex:lastVCIndex];
+            return lastVC.title;
+        }
+    }
+    
     return nil;
 }
 
@@ -204,6 +224,20 @@
 - (void)hideLoadingIndicator{
     [self.loadingIndicator stopAnimating];
     self.loadingIndicator.hidden = YES;
+}
+
+-(void)setNavBackButtonWithTitle:(NSString*)title{
+    UIButton* backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    [backButton setTitle:title forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [backButton setTitleColor:[UIColor whiteColor]];
+    [backButton setImage:[UIImage imageNamed:@"btn_back_white"] forState:UIControlStateNormal];
+    CGFloat imageWidth = backButton.imageView.size.width;
+    CGFloat titleWidth = [backButton.titleLabel.text textSizeForOneLineWithFont:backButton.titleLabel.font].width;
+    backButton.width = imageWidth + titleWidth;
+    [backButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [backButton addTarget:self action:@selector(didClickOnBackButton) forControlEvents:UIControlEventTouchUpInside];
+    [self setNavLeftItemWithButton:backButton];
 }
 
 

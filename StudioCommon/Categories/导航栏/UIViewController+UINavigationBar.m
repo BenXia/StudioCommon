@@ -210,6 +210,27 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
     }
 }
 
+- (void)setNavLeftItemWithButton:(UIButton*)button {
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    //navigation左右按钮位置调节
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        UIBarButtonItem *negativeSeperator = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        negativeSeperator.width = -10;//此处修改到边界的距离，请自行测试
+        
+        if (leftButton) {
+            [self.navigationItem setLeftBarButtonItems:@[negativeSeperator, leftButton]];
+        } else {
+            [self.navigationItem setLeftBarButtonItems:@[negativeSeperator]];
+        }
+    } else {
+        [self.navigationItem setLeftBarButtonItem:leftButton animated:NO];
+    }
+}
+
+- (void)setNavRightItemWithButton:(UIButton*)button{
+
+}
+
 - (void)setNavLeftItemWithName:(NSString *)name target:(id)target action:(SEL)action {
     [self setNavLeftItemWithName:name font:[UIFont systemFontOfSize:kNavigationItemFontSize] target:target action:action];
 }

@@ -20,6 +20,8 @@
 @property (nonatomic, strong) UIColor* navItemHighlightedTitleColor;    //改变导航栏左边按钮、右边按钮的Highlighted状态标题颜色
 
 - (void)clearNavLeftItem;
+- (void)setNavLeftItemWithButton:(UIButton*)button;
+
 - (void)setNavLeftItemWithImage:(NSString *)image target:(id)target action:(SEL)action;
 - (void)setNavLeftItemWithName:(NSString *)name target:(id)target action:(SEL)action;
 - (void)setNavLeftItemWithName:(NSString *)name font:(UIFont *)font target:(id)target action:(SEL)action;
