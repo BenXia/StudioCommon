@@ -181,6 +181,19 @@ SINGLETON_GCD(UserCache);
     return [ud objectForKey:@"token"];
 }
 
+- (NSString *)md5 {
+    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
+    return [ud objectForKey:@"md5"];
+}
+
+- (void)setMd5:(NSString *)md5 {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud removeObjectForKey:@"md5"];
+    [ud setObject:md5 forKey:@"md5"];
+    [ud synchronize];
+
+}
+
 
 // 用户手动退出或被踢后清除用户相关信息
 - (void)resetUser {
