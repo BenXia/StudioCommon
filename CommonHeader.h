@@ -82,6 +82,7 @@
 #import "QQingPageControl.h"
 #import "MJRefresh.h"
 #import "QQingAlertView.h"
+#import "PlaceholderTextView.h"
 
 // Utiliy.
 #import "UIUtils.h"

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33440CF91C78393500A441E3 /* QQingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33440CF61C78393500A441E3 /* QQingAlertView.m */; };
+		3360B4171C7CB8E600C60AC0 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */; };
 		33CAF8BA1C781D750015B4BC /* QQingWindowRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8B61C781D750015B4BC /* QQingWindowRootViewController.m */; };
 		33CAF8BB1C781D750015B4BC /* QQingPhotosBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8B91C781D750015B4BC /* QQingPhotosBrowserVC.m */; };
 		33CAF8BF1C781DD50015B4BC /* QQingPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8BE1C781DD50015B4BC /* QQingPageControl.m */; };
@@ -189,6 +190,8 @@
 /* Begin PBXFileReference section */
 		33440CF51C78393500A441E3 /* QQingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingAlertView.h; sourceTree = "<group>"; };
 		33440CF61C78393500A441E3 /* QQingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingAlertView.m; sourceTree = "<group>"; };
+		3360B4151C7CB8E600C60AC0 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		33C988881C42418A00262141 /* libStudioCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStudioCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CAF8B51C781D750015B4BC /* QQingWindowRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingWindowRootViewController.h; sourceTree = "<group>"; };
 		33CAF8B61C781D750015B4BC /* QQingWindowRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingWindowRootViewController.m; sourceTree = "<group>"; };
@@ -648,6 +651,15 @@
 				33440CF61C78393500A441E3 /* QQingAlertView.m */,
 			);
 			path = "AlertView支持Block";
+			sourceTree = "<group>";
+		};
+		3360B4141C7CB8E600C60AC0 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				3360B4151C7CB8E600C60AC0 /* PlaceholderTextView.h */,
+				3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
 			sourceTree = "<group>";
 		};
 		33C9887F1C42418A00262141 = {
@@ -1399,6 +1411,7 @@
 				33DD6BBD1C61064700CE6B31 /* 远程图片 */,
 				33CAF8BC1C781DD50015B4BC /* 页面控制 */,
 				33F071451C42C7B800DAC58F /* 上下拉刷新 */,
+				3360B4141C7CB8E600C60AC0 /* PlaceholderTextView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1859,6 +1872,7 @@
 				33F071BD1C42CF5800DAC58F /* AFHTTPRequestOperationManager.m in Sources */,
 				B5F385801C43750900E666F7 /* POPAnimationRuntime.mm in Sources */,
 				B5F385821C43750900E666F7 /* POPAnimator.mm in Sources */,
+				3360B4171C7CB8E600C60AC0 /* PlaceholderTextView.m in Sources */,
 				33F071A11C42CE9700DAC58F /* UIProgressView+AFNetworking.m in Sources */,
 				33D00FD51C623C2300499EE9 /* ComponentAlipay_Config.m in Sources */,
 			);
