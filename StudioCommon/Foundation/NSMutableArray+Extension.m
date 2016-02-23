@@ -360,4 +360,25 @@ static void			__ReleaseFunc( CFAllocatorRef allocator, const void * value ) {}
 	return self;
 }
 
+- (NSMutableArray*)removeObjectsIfKeyPath:(NSString*)keyPath containInArray:(NSArray*)otherArray withEqualBlock:(EqualBlock)equalBlock{
+    NSMutableArray* tmpArray = [NSMutableArray arrayWithArray:self];
+    BOOL(^checkBlock)(id) = ^(id checkObj){
+        id propertyObj = [checkObj valueForKeyPath:keyPath];
+        for (id obj in otherArray) {
+            if (equalBlock(propertyObj,obj)) {
+                return YES;
+            }
+        }
+        return NO;
+    };
+    
+    for (id obj in self) {
+        if (checkBlock(obj)) {
+            [tmpArray removeObject:obj];
+        }
+    }
+    
+    return tmpArray;
+}
+
 @end
