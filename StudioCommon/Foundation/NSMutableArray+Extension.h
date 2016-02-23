@@ -77,6 +77,7 @@ typedef BOOL (^EqualBlock)(id dst, id src);
 - (NSMutableArray *)keepTail:(NSUInteger)n;
 
 //当前数组元素对象的某属性值若包含在其他的数组中，则将该元素从当前数组移除
-- (NSMutableArray*)removeObjectsIfKeyPath:(NSString*)keyPath containInArray:(NSArray*)otherArray withEqualBlock:(EqualBlock)equalBlock;
+- (NSMutableArray*)arrayByRemoveObjectsIfKeyPath:(NSString*)keyPath containInArray:(NSArray*)otherArray withEqualBlock:(EqualBlock)equalBlock;
+
 
 @end
