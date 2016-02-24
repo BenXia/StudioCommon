@@ -38,7 +38,7 @@ DEC_SINGLETON( Utilities )
 
 // Toast
 + (void)showToastWithText:(NSString *)text;
-+ (void)showToastWithText:(NSString *)text isLoading:(BOOL)isLoading isBottom:(BOOL)isBottom;
++ (void)showToastWithText:(NSString *)text withImageName:(NSString *)imageName blockUI:(BOOL)needBlockUI;
 
 // AlertView
 + (void)showAlertView:(NSString*)title :(NSString*)message :(NSString*)enterStr;

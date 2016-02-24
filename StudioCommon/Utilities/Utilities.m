@@ -93,10 +93,9 @@ SINGLETON_GCD(Utilities);
         [Utilities sharedUtilities].progressHUD.labelText = text;
         [Utilities sharedUtilities].progressHUD.mode = (text.length > 0) ? MBProgressHUDModeText : MBProgressHUDModeIndeterminate;
         [Utilities sharedUtilities].progressHUD.removeFromSuperViewOnHide = YES;
-        [Utilities sharedUtilities].progressHUD.dimBackground = YES;
         [Utilities sharedUtilities].progressHUD.square = !(text.length > 0);
-        [Utilities sharedUtilities].progressHUD.userInteractionEnabled = !(text.length > 0);
-        [Utilities sharedUtilities].progressHUD.backgroundColor = (text.length > 0) ? [UIColor clearColor] : RGBA(0, 0, 0, 0.3);
+        [Utilities sharedUtilities].progressHUD.dimBackground = YES;
+        [Utilities sharedUtilities].progressHUD.userInteractionEnabled = YES;
         
         [[Utilities sharedUtilities].progressHUD show:YES];
         
@@ -145,30 +144,36 @@ SINGLETON_GCD(Utilities);
 
 
 + (void)showToastWithText:(NSString *)text {
-    [Utilities showToastWithText:text isLoading:NO isBottom:NO];
+    [Utilities showToastWithText:text withImageName:nil blockUI:YES];
 }
 
-+ (void)showToastWithText:(NSString *)text isLoading:(BOOL)isLoading isBottom:(BOOL)isBottom {
++ (void)showToastWithText:(NSString *)text withImageName:(NSString *)imageName blockUI:(BOOL)needBlockUI {
     dispatch_async(dispatch_get_main_queue(), ^{
         // 方案一：使用MBProgressHUD
-        [[Utilities sharedUtilities].toastProgressHUD hide:NO];
+        [[Utilities sharedUtilities].progressHUD hide:NO];
         if ([[UIApplication sharedApplication] keyWindow]) {
-            [Utilities sharedUtilities].toastProgressHUD = [[MBProgressHUD alloc] initWithWindow:[[UIApplication sharedApplication] keyWindow]];
+            [Utilities sharedUtilities].progressHUD = [[MBProgressHUD alloc] initWithWindow:[[UIApplication sharedApplication] keyWindow]];
             
             // Full screen show.
-            [[[UIApplication sharedApplication] keyWindow] addSubview:[Utilities sharedUtilities].toastProgressHUD];
-            [[Utilities sharedUtilities].toastProgressHUD bringToFront];
+            [[[UIApplication sharedApplication] keyWindow] addSubview:[Utilities sharedUtilities].progressHUD];
+            [[Utilities sharedUtilities].progressHUD bringToFront];
             
-            [Utilities sharedUtilities].toastProgressHUD.labelText = text;
-            [Utilities sharedUtilities].toastProgressHUD.mode = text.length > 0 ? MBProgressHUDModeText : MBProgressHUDModeIndeterminate;
-            [Utilities sharedUtilities].toastProgressHUD.removeFromSuperViewOnHide = YES;
-            [Utilities sharedUtilities].toastProgressHUD.dimBackground = YES;
-            [Utilities sharedUtilities].toastProgressHUD.square = !(text.length > 0);
-            [Utilities sharedUtilities].toastProgressHUD.userInteractionEnabled = NO;
+            [Utilities sharedUtilities].progressHUD.labelText = text;
+            if (([imageName length] > 0) && [UIImage imageNamed:imageName]) {
+                [Utilities sharedUtilities].progressHUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+                [Utilities sharedUtilities].progressHUD.mode = MBProgressHUDModeCustomView;
+            } else {
+                [Utilities sharedUtilities].progressHUD.mode = text.length > 0 ? MBProgressHUDModeText : MBProgressHUDModeIndeterminate;
+                [Utilities sharedUtilities].progressHUD.square = !(text.length > 0);
+            }
             
-            [[Utilities sharedUtilities].toastProgressHUD show:YES];
+            [Utilities sharedUtilities].progressHUD.removeFromSuperViewOnHide = YES;
+            [Utilities sharedUtilities].progressHUD.dimBackground = needBlockUI;
+            [Utilities sharedUtilities].progressHUD.userInteractionEnabled = needBlockUI;
             
-            [[Utilities sharedUtilities].toastProgressHUD hide:YES afterDelay:1.5];
+            [[Utilities sharedUtilities].progressHUD show:YES];
+            
+            [[Utilities sharedUtilities].progressHUD hide:YES afterDelay:1.5];
         }
         
         // 方案二：使用TSMessage

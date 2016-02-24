@@ -23,6 +23,10 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
 }
 
 - (void)setNavTitleColor:(UIColor *)navTitleColor {
+    if (!navTitleColor) {
+        navTitleColor = [UIColor whiteColor];
+    }
+    
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:navTitleColor}];
     NSArray* titleLabels = [self.navigationItem.titleView allViewOfClass:[UILabel class]];
     for (UILabel* label in titleLabels) {
@@ -48,6 +52,10 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
 
 - (void)setNavLeftItemNormalTitleColor:(UIColor *)navItemTitleColor {
     for (UIBarButtonItem* item in self.navigationItem.leftBarButtonItems) {
+        if (!navItemTitleColor) {
+            navItemTitleColor = [UIColor whiteColor];
+        }
+        
         [item setTitleTextAttributes:@{NSForegroundColorAttributeName:navItemTitleColor} forState:UIControlStateNormal];
         NSArray* allButtons = [item.customView allViewOfClass:[UIButton class]];
         for (UIButton* tmpButton in allButtons) {
@@ -68,6 +76,10 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
 
 - (void)setNavRightItemNormalTitleColor:(UIColor *)navItemTitleColor {
     for (UIBarButtonItem* item in self.navigationItem.rightBarButtonItems) {
+        if (!navItemTitleColor) {
+            navItemTitleColor = [UIColor whiteColor];
+        }
+        
         [item setTitleTextAttributes:@{NSForegroundColorAttributeName:navItemTitleColor} forState:UIControlStateNormal];
         NSArray* allButtons = [item.customView allViewOfClass:[UIButton class]];
         for (UIButton* tmpButton in allButtons) {

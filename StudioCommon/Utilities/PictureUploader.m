@@ -9,6 +9,7 @@
 #import "PictureUploader.h"
 
 @interface PictureUploader ()
+
 @property (strong, nonatomic) UIImage *uploadImage;
 
 @property (nonatomic,copy)ObjectBlock uploadSuccessBlock;
@@ -40,7 +41,7 @@
     [self uploadImagetoUrl:uploadHeadURL withImageUploadType:type];
 }
 
--(void)uploadImagetoUrl:(NSString*)url withImageUploadType:(ImageUploadType)type{
+- (void)uploadImagetoUrl:(NSString*)url withImageUploadType:(ImageUploadType)type {
     DDLogDebug(@"图片服务.上传URL:%@",url);
     //分界线的标识符
     NSString *TWITTERFON_FORM_BOUNDARY = @"AaB03x";
@@ -125,7 +126,7 @@
 
 #pragma mark - 回调
 
--(void)successCallBackWithResult:(id)result{
+- (void)successCallBackWithResult:(id)result {
     if (self.uploadSuccessBlock) {
         __weak typeof(self) weakSelf = self;
         [[GCDQueue mainQueue]queueBlock:^{
@@ -135,7 +136,7 @@
     }
 }
 
--(void)errorCallBack:(NSError*)error{
+- (void)errorCallBack:(NSError*)error {
     if (self.uploadFailBlock) {
         __weak typeof(self) weakSelf = self;
         [[GCDQueue mainQueue]queueBlock:^{
@@ -145,7 +146,7 @@
     }
 }
 
--(void)progressCallBack:(float)newProgress{
+-(void)progressCallBack:(float)newProgress {
     //上传进度
     if (self.uploadProgressBlock) {
         __weak typeof(self) weakSelf = self;
@@ -157,13 +158,11 @@
 
 #pragma mark - Private Method
 
-
-- (void)uploadDone{
+- (void)uploadDone {
     self.uploadImage = nil;
     self.uploadFailBlock = nil;
     self.uploadProgressBlock = nil;
     self.uploadSuccessBlock = nil;
 }
-
 
 @end
