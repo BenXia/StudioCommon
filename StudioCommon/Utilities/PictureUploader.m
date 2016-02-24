@@ -26,6 +26,7 @@
                  fail:(ErrorBlock)failBlock
              progress:(FloatBlock)progressBlock {
     NSString *uploadHeadURL;
+    self.uploadImage = picture;
     self.uploadSuccessBlock = successBlock;
     self.uploadFailBlock = failBlock;
     self.uploadProgressBlock = progressBlock;
