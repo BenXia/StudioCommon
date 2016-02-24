@@ -27,6 +27,7 @@
 		33CAF8F61C781E7E0015B4BC /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8E81C781E7E0015B4BC /* UIImage+WebP.m */; };
 		33CAF9001C78207E0015B4BC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8FD1C78207E0015B4BC /* BaseNavigationController.m */; };
 		33CAF9011C78207E0015B4BC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8FF1C78207E0015B4BC /* BaseViewController.m */; };
+		33CCB8C31C7DF8CA008D3DE4 /* MultiPictureUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */; };
 		33D00FB11C6239DD00499EE9 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D00F471C6239DD00499EE9 /* APAuthV2Info.m */; };
 		33D00FB21C6239DD00499EE9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D00F481C6239DD00499EE9 /* libcrypto.a */; };
 		33D00FB31C6239DD00499EE9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D00F491C6239DD00499EE9 /* libssl.a */; };
@@ -236,6 +237,8 @@
 		33CAF8FD1C78207E0015B4BC /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		33CAF8FE1C78207E0015B4BC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		33CAF8FF1C78207E0015B4BC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		33CCB8C11C7DF8CA008D3DE4 /* MultiPictureUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPictureUploader.h; sourceTree = "<group>"; };
+		33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPictureUploader.m; sourceTree = "<group>"; };
 		33D00F441C6239DD00499EE9 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		33D00F451C6239DD00499EE9 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		33D00F461C6239DD00499EE9 /* APAuthV2Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthV2Info.h; sourceTree = "<group>"; };
@@ -1364,6 +1367,8 @@
 				33F070D91C42BF2800DAC58F /* Utilities.m */,
 				930C34221C7804B3008823F9 /* PictureUploader.h */,
 				930C34231C7804B3008823F9 /* PictureUploader.m */,
+				33CCB8C11C7DF8CA008D3DE4 /* MultiPictureUploader.h */,
+				33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1752,6 +1757,7 @@
 				33CAF8F11C781E7E0015B4BC /* ELCAssetCell.m in Sources */,
 				33CAF8ED1C781E7E0015B4BC /* EGOPhotoImageView.m in Sources */,
 				33D00FB91C6239DD00499EE9 /* NSDataEx.m in Sources */,
+				33CCB8C31C7DF8CA008D3DE4 /* MultiPictureUploader.m in Sources */,
 				B5F385871C43750900E666F7 /* POPGeometry.mm in Sources */,
 				33D010241C62427B00499EE9 /* DDASLLogger.m in Sources */,
 				33F070A11C42B6FC00DAC58F /* NSData+Additions.m in Sources */,

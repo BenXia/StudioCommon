@@ -89,6 +89,7 @@
 #import "Utilities.h"
 #import "ImageUtil.h"
 #import "PictureUploader.h"
+#import "MultiPictureUploader.h"
 
 // Pods.
 #import "ReactiveCocoa.h"

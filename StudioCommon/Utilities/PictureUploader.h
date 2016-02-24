@@ -16,6 +16,10 @@ typedef enum : NSUInteger {
 @interface PictureUploader : NSObject
 
 // 上传头像
-- (void)uploadHeadPicture:(UIImage*)picture imageUploadType:(ImageUploadType)type success:(ObjectBlock)success fail:(ErrorBlock)fail progress:(FloatBlock)progress;
+- (void)uploadPicture:(UIImage *)picture
+      imageUploadType:(ImageUploadType)imageUploadType
+              success:(StringBlock)successBlock
+                 fail:(ErrorBlock)failBlock
+             progress:(FloatBlock)progressBlock ;
 
 @end
