@@ -113,6 +113,18 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
     return YES;
 }
 
+- (UIColor*)preferNavBarBackgroundColor{
+    return [UIColor themeBlueColor];
+}
+
+- (UIColor*)preferNavBarNormalTitleColor{
+    return [UIColor whiteColor];
+}
+
+- (UIColor*)preferNavBarHighlightedTitleColor {
+    return [UIColor colorWithRed:150 green:150 blue:150 alpha:1];
+}
+
 #pragma mark - Public Methods
 
 - (void)showWithImageView:(QQingImageView *)imageView withCompletion:(Block)completeBlock {

@@ -82,12 +82,14 @@
 #import "QQingPageControl.h"
 #import "MJRefresh.h"
 #import "QQingAlertView.h"
+#import "PlaceholderTextView.h"
 
 // Utiliy.
 #import "UIUtils.h"
 #import "Utilities.h"
 #import "ImageUtil.h"
 #import "PictureUploader.h"
+#import "MultiPictureUploader.h"
 
 // Pods.
 #import "ReactiveCocoa.h"

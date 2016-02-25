@@ -9,22 +9,28 @@
 #import "PictureUploader.h"
 
 @interface PictureUploader ()
+
 @property (strong, nonatomic) UIImage *uploadImage;
 
-@property (nonatomic,copy)ObjectBlock uploadSuccessBlock;
-@property (nonatomic,copy)ErrorBlock uploadFailBlock;
-@property (nonatomic,copy)FloatBlock uploadProgressBlock;
+@property (nonatomic,copy) StringBlock uploadSuccessBlock;
+@property (nonatomic,copy) ErrorBlock uploadFailBlock;
+@property (nonatomic,copy) FloatBlock uploadProgressBlock;
 
 @end
 
 @implementation PictureUploader
 
-- (void)uploadHeadPicture:(UIImage *)picture imageUploadType:(ImageUploadType)type success:(ObjectBlock)success fail:(ErrorBlock)fail progress:(FloatBlock)progress {
+- (void)uploadPicture:(UIImage *)picture
+      imageUploadType:(ImageUploadType)imageUploadType
+              success:(StringBlock)successBlock
+                 fail:(ErrorBlock)failBlock
+             progress:(FloatBlock)progressBlock {
     NSString *uploadHeadURL;
-    self.uploadSuccessBlock = success;
-    self.uploadFailBlock = fail;
-    self.uploadProgressBlock = progress;
-    switch (type) {
+    self.uploadImage = picture;
+    self.uploadSuccessBlock = successBlock;
+    self.uploadFailBlock = failBlock;
+    self.uploadProgressBlock = progressBlock;
+    switch (imageUploadType) {
         case kImageUploadType_HeadimgUploadType: {
              uploadHeadURL = [NSString stringWithFormat:@"http://api.x.jiefangqian.com/?v=0.0.1&method=%@&auth=%@",@"user.set_avator",[UserCache sharedUserCache].token];
         }
@@ -37,10 +43,10 @@
         default:
             break;
     }
-    [self uploadImagetoUrl:uploadHeadURL withImageUploadType:type];
+    [self uploadImagetoUrl:uploadHeadURL withImageUploadType:imageUploadType];
 }
 
--(void)uploadImagetoUrl:(NSString*)url withImageUploadType:(ImageUploadType)type{
+- (void)uploadImagetoUrl:(NSString*)url withImageUploadType:(ImageUploadType)imageUploadType {
     DDLogDebug(@"图片服务.上传URL:%@",url);
     //分界线的标识符
     NSString *TWITTERFON_FORM_BOUNDARY = @"AaB03x";
@@ -64,7 +70,7 @@
     ////添加分界线，换行
     [body appendFormat:@"%@\r\n", MPboundary];
     //声明imagekey字段，文件名为boris.png
-    switch (type) {
+    switch (imageUploadType) {
         case kImageUploadType_HeadimgUploadType:{
             [body appendFormat:@"Content-Disposition: form-data; name=\"avator\"; filename=\"picture.jpg\"\r\n"];
         }
@@ -114,7 +120,11 @@
             self.uploadFailBlock(error);
         } else {
             NSLog(@"图片服务上传成功");
-            self.uploadSuccessBlock([resDict objectForKey:@"avator"]);
+            if (imageUploadType == kImageUploadType_HeadimgUploadType) {
+                self.uploadSuccessBlock([resDict objectForKey:@"avator"]);
+            } else {
+                self.uploadSuccessBlock([resDict objectForKey:@"img"]);
+            }
         }
     } else {
         NSLog(@"图片服务.上传失败%@",error);
@@ -125,7 +135,7 @@
 
 #pragma mark - 回调
 
--(void)successCallBackWithResult:(id)result{
+- (void)successCallBackWithResult:(id)result {
     if (self.uploadSuccessBlock) {
         __weak typeof(self) weakSelf = self;
         [[GCDQueue mainQueue]queueBlock:^{
@@ -135,7 +145,7 @@
     }
 }
 
--(void)errorCallBack:(NSError*)error{
+- (void)errorCallBack:(NSError*)error {
     if (self.uploadFailBlock) {
         __weak typeof(self) weakSelf = self;
         [[GCDQueue mainQueue]queueBlock:^{
@@ -145,7 +155,7 @@
     }
 }
 
--(void)progressCallBack:(float)newProgress{
+-(void)progressCallBack:(float)newProgress {
     //上传进度
     if (self.uploadProgressBlock) {
         __weak typeof(self) weakSelf = self;
@@ -157,13 +167,11 @@
 
 #pragma mark - Private Method
 
-
-- (void)uploadDone{
+- (void)uploadDone {
     self.uploadImage = nil;
     self.uploadFailBlock = nil;
     self.uploadProgressBlock = nil;
     self.uploadSuccessBlock = nil;
 }
-
 
 @end

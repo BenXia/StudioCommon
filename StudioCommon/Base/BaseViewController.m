@@ -86,7 +86,11 @@
     [super viewWillDisappear:animated];
     
     if (self.hasPreferNavBarColor) {
-        self.navBarColor = self.originNavBarColor;
+        if (self.originNavBarColor) {
+            self.navBarColor = self.originNavBarColor;
+        } else {
+            self.navBarColor = [UIColor themeBlueColor];
+        }
     }
     
     if (self.hasPreferNavTitleColor) {

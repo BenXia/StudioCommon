@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33440CF91C78393500A441E3 /* QQingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33440CF61C78393500A441E3 /* QQingAlertView.m */; };
+		3360B4171C7CB8E600C60AC0 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */; };
 		33CAF8BA1C781D750015B4BC /* QQingWindowRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8B61C781D750015B4BC /* QQingWindowRootViewController.m */; };
 		33CAF8BB1C781D750015B4BC /* QQingPhotosBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8B91C781D750015B4BC /* QQingPhotosBrowserVC.m */; };
 		33CAF8BF1C781DD50015B4BC /* QQingPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8BE1C781DD50015B4BC /* QQingPageControl.m */; };
@@ -26,6 +27,7 @@
 		33CAF8F61C781E7E0015B4BC /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8E81C781E7E0015B4BC /* UIImage+WebP.m */; };
 		33CAF9001C78207E0015B4BC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8FD1C78207E0015B4BC /* BaseNavigationController.m */; };
 		33CAF9011C78207E0015B4BC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CAF8FF1C78207E0015B4BC /* BaseViewController.m */; };
+		33CCB8C31C7DF8CA008D3DE4 /* MultiPictureUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */; };
 		33D00FB11C6239DD00499EE9 /* APAuthV2Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D00F471C6239DD00499EE9 /* APAuthV2Info.m */; };
 		33D00FB21C6239DD00499EE9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D00F481C6239DD00499EE9 /* libcrypto.a */; };
 		33D00FB31C6239DD00499EE9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D00F491C6239DD00499EE9 /* libssl.a */; };
@@ -151,6 +153,8 @@
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
+		93EBD6D81C7F306C005FA9A1 /* ShareParamBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */; };
+		93EBD6DB1C7F3731005FA9A1 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */; };
 		93F2A0081C49E2380034486B /* UserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* UserCache.m */; };
 		93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; };
 		93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00E1C49E42E0034486B /* ArchiveRecord.m */; };
@@ -190,6 +194,8 @@
 /* Begin PBXFileReference section */
 		33440CF51C78393500A441E3 /* QQingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingAlertView.h; sourceTree = "<group>"; };
 		33440CF61C78393500A441E3 /* QQingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingAlertView.m; sourceTree = "<group>"; };
+		3360B4151C7CB8E600C60AC0 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		33C988881C42418A00262141 /* libStudioCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStudioCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CAF8B51C781D750015B4BC /* QQingWindowRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQingWindowRootViewController.h; sourceTree = "<group>"; };
 		33CAF8B61C781D750015B4BC /* QQingWindowRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQingWindowRootViewController.m; sourceTree = "<group>"; };
@@ -234,6 +240,8 @@
 		33CAF8FD1C78207E0015B4BC /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		33CAF8FE1C78207E0015B4BC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		33CAF8FF1C78207E0015B4BC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		33CCB8C11C7DF8CA008D3DE4 /* MultiPictureUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPictureUploader.h; sourceTree = "<group>"; };
+		33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPictureUploader.m; sourceTree = "<group>"; };
 		33D00F441C6239DD00499EE9 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		33D00F451C6239DD00499EE9 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		33D00F461C6239DD00499EE9 /* APAuthV2Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAuthV2Info.h; sourceTree = "<group>"; };
@@ -564,6 +572,10 @@
 		93DEA8501C4B8F73008211F7 /* UIColor+theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+theme.m"; sourceTree = "<group>"; };
 		93DEA8561C4B90F8008211F7 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
 		93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
+		93EBD6D51C7F306C005FA9A1 /* ShareParamBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareParamBuilder.h; sourceTree = "<group>"; };
+		93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareParamBuilder.m; sourceTree = "<group>"; };
+		93EBD6D91C7F3731005FA9A1 /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
+		93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		93F2A0061C49E2380034486B /* UserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCache.h; sourceTree = "<group>"; };
 		93F2A0071C49E2380034486B /* UserCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCache.m; sourceTree = "<group>"; };
 		93F2A00A1C49E2F40034486B /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
@@ -653,6 +665,15 @@
 			path = "AlertView支持Block";
 			sourceTree = "<group>";
 		};
+		3360B4141C7CB8E600C60AC0 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				3360B4151C7CB8E600C60AC0 /* PlaceholderTextView.h */,
+				3360B4161C7CB8E600C60AC0 /* PlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
+			sourceTree = "<group>";
+		};
 		33C9887F1C42418A00262141 = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +720,7 @@
 		33CAF8B31C781D750015B4BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				93EBD6BE1C7F306C005FA9A1 /* 分享 */,
 				33CAF8B41C781D750015B4BC /* 公用基类 */,
 				33CAF8B71C781D750015B4BC /* 图片浏览 */,
 			);
@@ -1355,6 +1377,8 @@
 				33F070D91C42BF2800DAC58F /* Utilities.m */,
 				930C34221C7804B3008823F9 /* PictureUploader.h */,
 				930C34231C7804B3008823F9 /* PictureUploader.m */,
+				33CCB8C11C7DF8CA008D3DE4 /* MultiPictureUploader.h */,
+				33CCB8C21C7DF8CA008D3DE4 /* MultiPictureUploader.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1403,6 +1427,7 @@
 				33DD6BBD1C61064700CE6B31 /* 远程图片 */,
 				33CAF8BC1C781DD50015B4BC /* 页面控制 */,
 				33F071451C42C7B800DAC58F /* 上下拉刷新 */,
+				3360B4141C7CB8E600C60AC0 /* PlaceholderTextView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1539,6 +1564,17 @@
 				93DEA8501C4B8F73008211F7 /* UIColor+theme.m */,
 			);
 			path = "调色板";
+			sourceTree = "<group>";
+		};
+		93EBD6BE1C7F306C005FA9A1 /* 分享 */ = {
+			isa = PBXGroup;
+			children = (
+				93EBD6D51C7F306C005FA9A1 /* ShareParamBuilder.h */,
+				93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */,
+				93EBD6D91C7F3731005FA9A1 /* ShareManager.h */,
+				93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */,
+			);
+			path = "分享";
 			sourceTree = "<group>";
 		};
 		93F2A0051C49E21B0034486B /* Storage */ = {
@@ -1752,6 +1788,7 @@
 				33CAF8F11C781E7E0015B4BC /* ELCAssetCell.m in Sources */,
 				33CAF8ED1C781E7E0015B4BC /* EGOPhotoImageView.m in Sources */,
 				33D00FB91C6239DD00499EE9 /* NSDataEx.m in Sources */,
+				33CCB8C31C7DF8CA008D3DE4 /* MultiPictureUploader.m in Sources */,
 				B5F385871C43750900E666F7 /* POPGeometry.mm in Sources */,
 				33D010241C62427B00499EE9 /* DDASLLogger.m in Sources */,
 				33F070A11C42B6FC00DAC58F /* NSData+Additions.m in Sources */,
@@ -1838,6 +1875,7 @@
 				93F2A0081C49E2380034486B /* UserCache.m in Sources */,
 				33D00FD31C623C2300499EE9 /* ComponentPayment.m in Sources */,
 				33CAF8EE1C781E7E0015B4BC /* EGOPhotoScrollView.m in Sources */,
+				93EBD6DB1C7F3731005FA9A1 /* ShareManager.m in Sources */,
 				33CAF8EC1C781E7E0015B4BC /* EGOPhotoCaptionView.m in Sources */,
 				B5F3858A1C43750900E666F7 /* POPPropertyAnimation.mm in Sources */,
 				33D00FB61C6239DD00499EE9 /* DataSigner.m in Sources */,
@@ -1850,6 +1888,7 @@
 				33F0715A1C42C7B800DAC58F /* UIScrollView+Extension.m in Sources */,
 				33D00FF41C623F6500499EE9 /* NSMutableDictionary+Extension.m in Sources */,
 				33D00FB41C6239DD00499EE9 /* Order.m in Sources */,
+				93EBD6D81C7F306C005FA9A1 /* ShareParamBuilder.m in Sources */,
 				33D010221C62427B00499EE9 /* DDAbstractDatabaseLogger.m in Sources */,
 				33F070171C424EE900DAC58F /* NSObject+SafeValueWithJSON.m in Sources */,
 				33D00FD71C623C2300499EE9 /* ComponentWechatPay.m in Sources */,
@@ -1873,6 +1912,7 @@
 				33F071BD1C42CF5800DAC58F /* AFHTTPRequestOperationManager.m in Sources */,
 				B5F385801C43750900E666F7 /* POPAnimationRuntime.mm in Sources */,
 				B5F385821C43750900E666F7 /* POPAnimator.mm in Sources */,
+				3360B4171C7CB8E600C60AC0 /* PlaceholderTextView.m in Sources */,
 				33F071A11C42CE9700DAC58F /* UIProgressView+AFNetworking.m in Sources */,
 				33D00FD51C623C2300499EE9 /* ComponentAlipay_Config.m in Sources */,
 			);
