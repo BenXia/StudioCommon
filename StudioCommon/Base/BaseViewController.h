@@ -102,4 +102,7 @@
 - (void)showLoadingIndicator;
 - (void)hideLoadingIndicator;
 
+- (void)showLoadingView;
+- (void)hideLoadingView;
+
 @end

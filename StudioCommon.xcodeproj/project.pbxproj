@@ -144,6 +144,7 @@
 		33F071C41C42CF5800DAC58F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F071BB1C42CF5800DAC58F /* AFURLSessionManager.m */; };
 		888C7A531C7946D200CA2ED9 /* UILabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 888C7A501C7946D200CA2ED9 /* UILabel+Size.m */; };
 		888C7A541C7946D200CA2ED9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 888C7A521C7946D200CA2ED9 /* UIView+Frame.m */; };
+		888E71001C7F486500A12377 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E70FF1C7F486500A12377 /* LoadingView.m */; };
 		930C34211C77FD85008823F9 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34201C77FD85008823F9 /* ImageUtil.m */; };
 		930C34241C7804B3008823F9 /* PictureUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34231C7804B3008823F9 /* PictureUploader.m */; };
 		93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */; };
@@ -551,6 +552,8 @@
 		888C7A501C7946D200CA2ED9 /* UILabel+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Size.m"; sourceTree = "<group>"; };
 		888C7A511C7946D200CA2ED9 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		888C7A521C7946D200CA2ED9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		888E70FE1C7F486500A12377 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		888E70FF1C7F486500A12377 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		930C341F1C77FD85008823F9 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
 		930C34201C77FD85008823F9 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
 		930C34221C7804B3008823F9 /* PictureUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureUploader.h; sourceTree = "<group>"; };
@@ -1394,6 +1397,7 @@
 		33F071441C42C7B800DAC58F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				888E70FD1C7F47D600A12377 /* 加载效果 */,
 				33440CF41C78393500A441E3 /* AlertView支持Block */,
 				33DD6BC11C61067300CE6B31 /* 进度显示 */,
 				33DD6BBD1C61064700CE6B31 /* 远程图片 */,
@@ -1495,6 +1499,15 @@
 				888C7A521C7946D200CA2ED9 /* UIView+Frame.m */,
 			);
 			path = "布局计算";
+			sourceTree = "<group>";
+		};
+		888E70FD1C7F47D600A12377 /* 加载效果 */ = {
+			isa = PBXGroup;
+			children = (
+				888E70FE1C7F486500A12377 /* LoadingView.h */,
+				888E70FF1C7F486500A12377 /* LoadingView.m */,
+			);
+			path = "加载效果";
 			sourceTree = "<group>";
 		};
 		9377AC591C535D35003B24B1 /* 按钮相关 */ = {
@@ -1755,6 +1768,7 @@
 				33F070E51C42C15900DAC58F /* GCDGroup.m in Sources */,
 				33D010251C62427B00499EE9 /* DDFileLogger.m in Sources */,
 				33D31FB21C62EE8A00EB69E1 /* UIButton+Label.m in Sources */,
+				888E71001C7F486500A12377 /* LoadingView.m in Sources */,
 				B5F3857E1C43750900E666F7 /* POPAnimationEvent.mm in Sources */,
 				33CAF8EB1C781E7E0015B4BC /* EGOQuickPhotoSource.m in Sources */,
 				33D010281C62427B00499EE9 /* DDContextFilterLogFormatter.m in Sources */,

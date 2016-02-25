@@ -8,10 +8,12 @@
 
 #import "BaseViewController.h"
 #import "Masonry.h"
+#import "LoadingView.h"
 
 @interface BaseViewController ()
 
 @property (strong,nonatomic) UIActivityIndicatorView *loadingIndicator;
+@property (strong,nonatomic) LoadingView *loadingView;
 
 //
 @property (copy,nonatomic) UIColor* originNavBarColor;
@@ -226,6 +228,16 @@
     self.loadingIndicator.hidden = YES;
 }
 
+- (void)showLoadingView{
+    [self.loadingView bringToFront];
+    self.loadingView.hidden = NO;
+    [self.loadingView startAnimating];
+}
+- (void)hideLoadingView{
+    [self.loadingView stopAnimating];
+    self.loadingView.hidden = YES;
+}
+
 -(void)setNavBackButtonWithTitle:(NSString*)title{
     UIButton* backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [backButton setTitle:title forState:UIControlStateNormal];
@@ -258,6 +270,14 @@
         }];
     }
     return _loadingIndicator;
+}
+
+-(LoadingView*)loadingView{
+    if (_loadingView == nil) {
+        _loadingView = [[LoadingView alloc] initWithFrame:CGRectMake((kScreenWidth - 60)/2, 60, 60, 60)];
+        [self.view addSubview:_loadingView];
+    }
+    return _loadingView;
 }
 
 @end
