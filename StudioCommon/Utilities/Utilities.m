@@ -200,11 +200,11 @@ SINGLETON_GCD(Utilities);
 #pragma mark - 弹出框
 
 + (void)showPopup:(UIView *)contentView {
-    [Utilities showPopup:contentView];
+    [Utilities showPopup:contentView touchBackgroundHide:YES];
 }
 
 + (void)showPopup:(UIView *)contentView touchBackgroundHide:(BOOL)hide {
-    [Utilities showPopup:contentView touchBackgroundHide:hide];
+    [Utilities showPopup:contentView touchBackgroundHide:hide animationType:PopupAnimationType_Normal];
 }
 
 + (void)showPopup:(UIView *)contentView touchBackgroundHide:(BOOL)hide animationType:(PopupAnimationType)animationType {
