@@ -152,6 +152,8 @@
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93DEA8591C4B944F008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
+		93EBD6D81C7F306C005FA9A1 /* ShareParamBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */; };
+		93EBD6DB1C7F3731005FA9A1 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */; };
 		93F2A0081C49E2380034486B /* UserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* UserCache.m */; };
 		93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; };
 		93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00E1C49E42E0034486B /* ArchiveRecord.m */; };
@@ -567,6 +569,10 @@
 		93DEA8501C4B8F73008211F7 /* UIColor+theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+theme.m"; sourceTree = "<group>"; };
 		93DEA8561C4B90F8008211F7 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
 		93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
+		93EBD6D51C7F306C005FA9A1 /* ShareParamBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareParamBuilder.h; sourceTree = "<group>"; };
+		93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareParamBuilder.m; sourceTree = "<group>"; };
+		93EBD6D91C7F3731005FA9A1 /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
+		93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		93F2A0061C49E2380034486B /* UserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCache.h; sourceTree = "<group>"; };
 		93F2A0071C49E2380034486B /* UserCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCache.m; sourceTree = "<group>"; };
 		93F2A00A1C49E2F40034486B /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
@@ -711,6 +717,7 @@
 		33CAF8B31C781D750015B4BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				93EBD6BE1C7F306C005FA9A1 /* 分享 */,
 				33CAF8B41C781D750015B4BC /* 公用基类 */,
 				33CAF8B71C781D750015B4BC /* 图片浏览 */,
 			);
@@ -1546,6 +1553,17 @@
 			path = "调色板";
 			sourceTree = "<group>";
 		};
+		93EBD6BE1C7F306C005FA9A1 /* 分享 */ = {
+			isa = PBXGroup;
+			children = (
+				93EBD6D51C7F306C005FA9A1 /* ShareParamBuilder.h */,
+				93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */,
+				93EBD6D91C7F3731005FA9A1 /* ShareManager.h */,
+				93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */,
+			);
+			path = "分享";
+			sourceTree = "<group>";
+		};
 		93F2A0051C49E21B0034486B /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1843,6 +1861,7 @@
 				93F2A0081C49E2380034486B /* UserCache.m in Sources */,
 				33D00FD31C623C2300499EE9 /* ComponentPayment.m in Sources */,
 				33CAF8EE1C781E7E0015B4BC /* EGOPhotoScrollView.m in Sources */,
+				93EBD6DB1C7F3731005FA9A1 /* ShareManager.m in Sources */,
 				33CAF8EC1C781E7E0015B4BC /* EGOPhotoCaptionView.m in Sources */,
 				B5F3858A1C43750900E666F7 /* POPPropertyAnimation.mm in Sources */,
 				33D00FB61C6239DD00499EE9 /* DataSigner.m in Sources */,
@@ -1855,6 +1874,7 @@
 				33F0715A1C42C7B800DAC58F /* UIScrollView+Extension.m in Sources */,
 				33D00FF41C623F6500499EE9 /* NSMutableDictionary+Extension.m in Sources */,
 				33D00FB41C6239DD00499EE9 /* Order.m in Sources */,
+				93EBD6D81C7F306C005FA9A1 /* ShareParamBuilder.m in Sources */,
 				33D010221C62427B00499EE9 /* DDAbstractDatabaseLogger.m in Sources */,
 				33F070171C424EE900DAC58F /* NSObject+SafeValueWithJSON.m in Sources */,
 				33D00FD71C623C2300499EE9 /* ComponentWechatPay.m in Sources */,
