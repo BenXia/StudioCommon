@@ -90,6 +90,7 @@
 #import "ImageUtil.h"
 #import "PictureUploader.h"
 #import "MultiPictureUploader.h"
+#import "SimpleCountdown.h"
 
 // Pods.
 #import "ReactiveCocoa.h"

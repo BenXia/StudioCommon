@@ -149,6 +149,7 @@
 		888E71001C7F486500A12377 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E70FF1C7F486500A12377 /* LoadingView.m */; };
 		930C34211C77FD85008823F9 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34201C77FD85008823F9 /* ImageUtil.m */; };
 		930C34241C7804B3008823F9 /* PictureUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930C34231C7804B3008823F9 /* PictureUploader.m */; };
+		939E58A11C80AD9C00E24080 /* SimpleCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E58A01C80AD9C00E24080 /* SimpleCountdown.m */; };
 		93A1F5BE1C625A4F00CFEEC4 /* UITableViewCell+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */; };
 		93DEA8541C4B8F73008211F7 /* UIColor+theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8501C4B8F73008211F7 /* UIColor+theme.m */; };
 		93DEA8581C4B90F8008211F7 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEA8571C4B90F8008211F7 /* UIColor-Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -566,6 +567,8 @@
 		930C34201C77FD85008823F9 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
 		930C34221C7804B3008823F9 /* PictureUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureUploader.h; sourceTree = "<group>"; };
 		930C34231C7804B3008823F9 /* PictureUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureUploader.m; sourceTree = "<group>"; };
+		939E589F1C80AD9C00E24080 /* SimpleCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCountdown.h; sourceTree = "<group>"; };
+		939E58A01C80AD9C00E24080 /* SimpleCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCountdown.m; sourceTree = "<group>"; };
 		93A1F5BC1C625A4F00CFEEC4 /* UITableViewCell+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Base.h"; sourceTree = "<group>"; };
 		93A1F5BD1C625A4F00CFEEC4 /* UITableViewCell+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Base.m"; sourceTree = "<group>"; };
 		93DEA84F1C4B8F73008211F7 /* UIColor+theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+theme.h"; sourceTree = "<group>"; };
@@ -1369,6 +1372,8 @@
 		33F070D71C42BF2800DAC58F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				939E589F1C80AD9C00E24080 /* SimpleCountdown.h */,
+				939E58A01C80AD9C00E24080 /* SimpleCountdown.m */,
 				930C341F1C77FD85008823F9 /* ImageUtil.h */,
 				930C34201C77FD85008823F9 /* ImageUtil.m */,
 				33F071331C42C4DA00DAC58F /* UIUtils.h */,
@@ -1883,6 +1888,7 @@
 				33D00FD41C623C2300499EE9 /* ComponentAlipay.m in Sources */,
 				33CAF8F01C781E7E0015B4BC /* ELCAsset.m in Sources */,
 				B5F3858D1C43750900E666F7 /* TransformationMatrix.cpp in Sources */,
+				939E58A11C80AD9C00E24080 /* SimpleCountdown.m in Sources */,
 				888C7A531C7946D200CA2ED9 /* UILabel+Size.m in Sources */,
 				33F071BF1C42CF5800DAC58F /* AFNetworkReachabilityManager.m in Sources */,
 				33F0715A1C42C7B800DAC58F /* UIScrollView+Extension.m in Sources */,
