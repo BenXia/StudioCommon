@@ -119,8 +119,7 @@
         [self notifyFailed:self.err_Cancel];
     } else if ([error is:self.err_Uninstalled]) {
     
-    }
-    else {
+    } else {
         [self notifyFailed:self.err_Failure];
     }
 }
