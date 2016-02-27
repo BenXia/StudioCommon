@@ -381,4 +381,25 @@ static void			__ReleaseFunc( CFAllocatorRef allocator, const void * value ) {}
     return tmpArray;
 }
 
+- (NSMutableArray*)arrayByRemoveObjectsContainInArray:(NSArray *)otherArray withEqualBlock:(EqualBlock)equalBlock{
+
+    NSMutableArray* tmpArray = [NSMutableArray arrayWithArray:self];
+    BOOL(^checkBlock)(id) = ^(id checkObj){
+        for (id obj in otherArray) {
+            if (equalBlock(checkBlock,obj)) {
+                return YES;
+            }
+        }
+        return NO;
+    };
+    
+    for (id obj in self) {
+        if (checkBlock(obj)) {
+            [tmpArray removeObject:obj];
+        }
+    }
+    
+    return tmpArray;
+}
+
 @end

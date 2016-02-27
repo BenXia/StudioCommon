@@ -30,7 +30,7 @@
 
 #import "NSArray+Extension.h"
 
-typedef BOOL (^EqualBlock)(id dst, id src);
+typedef BOOL (^EqualBlock)(id obj1, id obj2);
 
 #pragma mark -
 
@@ -78,6 +78,9 @@ typedef BOOL (^EqualBlock)(id dst, id src);
 
 //当前数组元素对象的某属性值若包含在其他的数组中，则将该元素从当前数组移除
 - (NSMutableArray*)arrayByRemoveObjectsIfKeyPath:(NSString*)keyPath containInArray:(NSArray*)otherArray withEqualBlock:(EqualBlock)equalBlock;
+
+//当前数组元素对象若包含在其他的数组中，则将该元素从当前数组移除
+- (NSMutableArray*)arrayByRemoveObjectsContainInArray:(NSArray *)otherArray withEqualBlock:(EqualBlock)equalBlock;
 
 
 @end
