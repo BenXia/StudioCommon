@@ -28,8 +28,6 @@
 @def_error( err_AliNetError, kAlipayErrorCode_NetError, @"")
 
 - (BOOL)pay {
-//    NSError *error = nil;
-    
     NSString *appSchema = [AppSystem appSchema:@"alipay"];
     if (! appSchema) {
         appSchema = [AppSystem appSchema];
