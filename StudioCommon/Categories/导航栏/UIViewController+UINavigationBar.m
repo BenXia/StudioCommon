@@ -144,6 +144,8 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
 }
 
 - (void)setNavTitleString:(NSString *)titleString {
+    self.title = titleString;
+    
     //自定义标题
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0 , 100, 44)];
     titleLabel.backgroundColor = [UIColor clearColor];
