@@ -66,6 +66,7 @@
 }
 
 - (void)colorlumpThematized:(UIColor *)color {
+    self.backgroundColor = color;
     [self setNormalBackgroundColor:color
             disableBackgroundColor:[UIColor buttonDisableStateColor]];
     
