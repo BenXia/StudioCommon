@@ -21,6 +21,8 @@
 + (UIColor *)themeCyanColor;
 
 + (UIColor *)themeButtonBlueColor;
+
++ (UIColor *)themeBackGrayColor;
 // ===============================================
 // 全局用色：灰色系
 
