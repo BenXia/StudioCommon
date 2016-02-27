@@ -27,6 +27,10 @@
     return [UIColor colorWithRed:61.0/255 green:183.0/255 blue:235.0/255 alpha:1];
 }
 
++ (UIColor *)themeBackGrayColor {
+    return [UIColor colorWithRGBHex:0xe6e6e6];
+}
+
 // ===============================================
 // 全局用色：灰色系
 
