@@ -70,7 +70,7 @@
 	//在Document文件夹下创建私钥文件
 	NSString * signedString = nil;
 	NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-	NSString *path = [documentPath stringByAppendingPathComponent:@"AlixPay-RSAPrivateKey"];
+	NSString *path = [documentPath stringByAppendingPathComponent:@"DAOBANG_AlixPay_RSAPrivateKey"];
 	
 	// 把密钥写入文件
 	NSString *formatKey = [self formatPrivateKey:_privateKey];

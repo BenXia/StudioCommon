@@ -26,8 +26,8 @@
     order.paymentType   = [ComponentAlipay_Config sharedInstance].paymentType;
     order.inputCharset  = [ComponentAlipay_Config sharedInstance].inputCharset;
     
-    if (self.no && self.no.length) {
-        order.tradeNO = self.no;
+    if (self.ID && self.ID.length) {
+        order.tradeNO = self.ID;
     } else {
         *ppError    = [self err_invalidOrderNumber];
         
@@ -83,7 +83,7 @@
 }
 
 - (void)clear {
-    self.no = nil;
+    self.ID = nil;
     self.name = nil;
     self.desc = nil;
     self.price = nil;
