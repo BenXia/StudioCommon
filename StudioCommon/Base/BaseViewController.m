@@ -10,6 +10,8 @@
 #import "Masonry.h"
 #import "LoadingView.h"
 
+static const CGFloat kNavigationItemFontSize = 16.0f;
+
 @interface BaseViewController ()
 
 @property (strong,nonatomic) UIActivityIndicatorView *loadingIndicator;
@@ -245,7 +247,7 @@
 -(void)setNavBackButtonWithTitle:(NSString*)title{
     UIButton* backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [backButton setTitle:title forState:UIControlStateNormal];
-    backButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    backButton.titleLabel.font = [UIFont systemFontOfSize:kNavigationItemFontSize];
     [backButton setTitleColor:[UIColor whiteColor]];
     [backButton setImage:[UIImage imageNamed:@"btn_back_white"] forState:UIControlStateNormal];
     CGFloat imageWidth = backButton.imageView.size.width;
