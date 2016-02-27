@@ -177,7 +177,7 @@
 #pragma mark - Status style
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Navigation
