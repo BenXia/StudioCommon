@@ -31,31 +31,25 @@
     const char *pstr = [privateKey UTF8String];
     int len = (int)[privateKey length];
     NSMutableString *result = [NSMutableString string];
-    
-    // Modified by Jie.li
-    // If remain, error like:
-    // 报错：rsa_private read error : private key is NULL
-    // 原因：私钥没有转成PKCS8
-    
-//    [result appendString:@"-----BEGIN PRIVATE KEY-----\n"];
+    //[result appendString:@"-----BEGIN PRIVATE KEY-----\n"];
     [result appendString:@"-----BEGIN RSA PRIVATE KEY-----\n"];
     int index = 0;
-	int count = 0;
+    int count = 0;
     while (index < len) {
         char ch = pstr[index];
-		if (ch == '\r' || ch == '\n') {
-			++index;
-			continue;
-		}
+        if (ch == '\r' || ch == '\n') {
+            ++index;
+            continue;
+        }
         [result appendFormat:@"%c", ch];
         if (++count == 79)
         {
             [result appendString:@"\n"];
-			count = 0;
+            count = 0;
         }
         index++;
     }
-//    [result appendString:@"\n-----END PRIVATE KEY-----"];
+    //[result appendString:@"\n-----END PRIVATE KEY-----"];
     [result appendString:@"\n-----END RSA PRIVATE KEY-----"];
     return result;
 }
@@ -70,7 +64,7 @@
 	//在Document文件夹下创建私钥文件
 	NSString * signedString = nil;
 	NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-	NSString *path = [documentPath stringByAppendingPathComponent:@"DAOBANG_AlixPay_RSAPrivateKey"];
+	NSString *path = [documentPath stringByAppendingPathComponent:@"AlixPay-RSAPrivateKey"];
 	
 	// 把密钥写入文件
 	NSString *formatKey = [self formatPrivateKey:_privateKey];
