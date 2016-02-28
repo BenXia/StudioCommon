@@ -150,6 +150,4 @@ NULL]];\
 
 #define kYuanSymbolStr   @"￥"
 
-#define kLastShownGuidanceVCAppVersion    @"LastShownGuidanceVCAppVersion"
-
 #endif
