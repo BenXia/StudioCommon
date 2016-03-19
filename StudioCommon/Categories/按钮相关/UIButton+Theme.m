@@ -68,7 +68,7 @@
 - (void)colorlumpThematized:(UIColor *)color {
     self.backgroundColor = color;
     [self setNormalBackgroundColor:color
-            disableBackgroundColor:[UIColor buttonDisableStateColor]];
+            disableBackgroundColor:[g_commonConfig buttonDisableStateColor]];
     
     [self setTitleColor:[UIColor whiteColor]];
     
@@ -77,7 +77,7 @@
 
 - (void)thematizedWithBackgroundColor:(UIColor*)backgroundColor {
     [self setNormalBackgroundColor:backgroundColor
-            disableBackgroundColor:[UIColor gray005Color]];
+            disableBackgroundColor:[g_commonConfig gray005Color]];
     [self setTitleColor:[UIColor whiteColor]];
     
     [self circularCorner];

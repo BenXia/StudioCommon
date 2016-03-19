@@ -114,7 +114,7 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
 }
 
 - (UIColor*)preferNavBarBackgroundColor{
-    return [UIColor themeBlueColor];
+    return [g_commonConfig themeBlueColor];
 }
 
 - (UIColor*)preferNavBarNormalTitleColor{
@@ -270,7 +270,7 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
                                         kPageControlHeight);
         CGFloat screenScale = [UIScreen mainScreen].scale;
         _pageControl.image = [UIImage circleImageWithColor:[UIColor grayColor] andSize:CGSizeMake(8 * screenScale, 8 * screenScale)];
-        _pageControl.highlightedImage = [UIImage circleImageWithColor:[UIColor themeBlueColor] andSize:CGSizeMake(8 * screenScale, 8 * screenScale)];
+        _pageControl.highlightedImage = [UIImage circleImageWithColor:[g_commonConfig themeBlueColor] andSize:CGSizeMake(8 * screenScale, 8 * screenScale)];
         _pageControl.point_img_width = 8.0;
         _pageControl.point_max_space = 4.0;
         _pageControl.point_min_space = 2.0;

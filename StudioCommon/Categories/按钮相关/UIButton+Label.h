@@ -12,7 +12,8 @@
 
 - (NSString *)getLabelText;
 
-- (void)centerImageAndTitle:(float)space;
+//让图片与文字上下布局，中心对齐
+- (void)centerImageAndTitleWithSpace:(float)space;
 - (void)centerImageAndTitle;
 
 @end

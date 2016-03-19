@@ -714,4 +714,6 @@ static const char *colorNameDB = ","
 	}
 	colorNameCache = [cache copy];
 }
+
 @end
+

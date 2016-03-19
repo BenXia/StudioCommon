@@ -91,7 +91,7 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
         if (self.originNavBarColor) {
             self.navBarColor = self.originNavBarColor;
         } else {
-            self.navBarColor = [UIColor themeBlueColor];
+            self.navBarColor = [g_commonConfig themeBlueColor];
         }
     }
     
@@ -153,7 +153,7 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
 #pragma mark - NavigationBar style
 
 - (UIColor *)preferNavBarBackgroundColor{
-    return [UIColor themeBlueColor];
+    return [g_commonConfig themeBlueColor];
 }
 
 - (UIColor *)preferNavBarNormalTitleColor{

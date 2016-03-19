@@ -21,7 +21,7 @@
     return label.text;
 }
 
-- (void)centerImageAndTitle:(float)spacing {
+- (void)centerImageAndTitleWithSpace:(float)spacing {
     // get the size of the elements here for readability
     CGSize imageSize = self.imageView.frame.size;
     CGSize titleSize = self.titleLabel.frame.size;
@@ -38,7 +38,7 @@
 
 - (void)centerImageAndTitle {
     const int DEFAULT_SPACING = 6.0f;
-    [self centerImageAndTitle:DEFAULT_SPACING];
+    [self centerImageAndTitleWithSpace:DEFAULT_SPACING];
 }
 
 @end

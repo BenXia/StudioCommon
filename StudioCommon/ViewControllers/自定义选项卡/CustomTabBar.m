@@ -46,7 +46,7 @@
             [btn setTitleColor:[selectedTitleTextAttributesDict objectForKey:NSForegroundColorAttributeName]
                       forState:UIControlStateSelected];
         } else {
-            [btn setTitleColor:[UIColor themeBlueColor]
+            [btn setTitleColor:[g_commonConfig themeBlueColor]
                       forState:UIControlStateSelected];
         }
     } else {
@@ -73,7 +73,7 @@
         [btn setImage:selectedImage forState:UIControlStateSelected];
         
         [btn setTitle:title forState:UIControlStateNormal];
-        [btn centerImageAndTitle:1.0f];
+        [btn centerImageAndTitleWithSpace:1.0f];
     } else {
         [btn setImage:image forState:UIControlStateNormal];
         [btn setImage:selectedImage forState:UIControlStateSelected];
@@ -113,7 +113,7 @@
 		btn.frame = CGRectMake(x, y, width, height - y);
         
         if ([btn titleForState:UIControlStateNormal].length > 0) {
-            [btn centerImageAndTitle:1.0f];
+            [btn centerImageAndTitleWithSpace:1.0f];
         }
 	}
 }

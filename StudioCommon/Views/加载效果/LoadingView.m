@@ -56,14 +56,14 @@
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     shapeLayer.frame = CGRectMake(0, 0, self.width, kWidthOfLoadingCircle);
     shapeLayer.fillColor = nil;
-    shapeLayer.strokeColor = [UIColor gray005Color].CGColor;
+    shapeLayer.strokeColor = [g_commonConfig gray005Color].CGColor;
     
     [self.layer addSublayer:shapeLayer];
     self.shapeLayer = shapeLayer;
     
     //加载中文字
     UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidthOfLoadingCircle, self.width, self.height-kWidthOfLoadingCircle)];
-    label.textColor = [UIColor gray005Color];
+    label.textColor = [g_commonConfig gray005Color];
     label.font = [UIFont systemFontOfSize:15];
     label.text = @"加载中...";
     label.textAlignment = NSTextAlignmentCenter;

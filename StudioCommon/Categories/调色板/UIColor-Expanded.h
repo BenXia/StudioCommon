@@ -33,25 +33,25 @@
 
 // Arithmetic operations on the color
 - (UIColor *)colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (UIColor *)       colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (UIColor *) colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (UIColor *)  colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (UIColor *)colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (UIColor *)colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (UIColor *)colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
 
 - (UIColor *)colorByMultiplyingBy:(CGFloat)f;
-- (UIColor *)       colorByAdding:(CGFloat)f;
-- (UIColor *) colorByLighteningTo:(CGFloat)f;
-- (UIColor *)  colorByDarkeningTo:(CGFloat)f;
+- (UIColor *)colorByAdding:(CGFloat)f;
+- (UIColor *)colorByLighteningTo:(CGFloat)f;
+- (UIColor *)colorByDarkeningTo:(CGFloat)f;
 
 - (UIColor *)colorByMultiplyingByColor:(UIColor *)color;
-- (UIColor *)       colorByAddingColor:(UIColor *)color;
-- (UIColor *) colorByLighteningToColor:(UIColor *)color;
-- (UIColor *)  colorByDarkeningToColor:(UIColor *)color;
+- (UIColor *)colorByAddingColor:(UIColor *)color;
+- (UIColor *)colorByLighteningToColor:(UIColor *)color;
+- (UIColor *)colorByDarkeningToColor:(UIColor *)color;
 
 // Related colors
 - (UIColor *)contrastingColor;			// A good contrasting color: will be either black or white
 - (UIColor *)complementaryColor;		// A complementary color that should look good with this color
-- (NSArray*)triadicColors;				// Two colors that should look good with this color
-- (NSArray*)analogousColorsWithStepAngle:(CGFloat)stepAngle pairCount:(int)pairs;	// Multiple pairs of colors
+- (NSArray *)triadicColors;				// Two colors that should look good with this color
+- (NSArray *)analogousColorsWithStepAngle:(CGFloat)stepAngle pairCount:(int)pairs;	// Multiple pairs of colors
 
 // String representations of the color
 - (NSString *)stringFromColor;
