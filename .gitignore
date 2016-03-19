@@ -27,3 +27,5 @@ DerivedData
 
 build/StudioCommon.build/Release-iphoneos/StudioCommonBundle.build/dgph
 build/StudioCommonBundle.bundle/*
+dgph
+build/StudioCommon.build/*
