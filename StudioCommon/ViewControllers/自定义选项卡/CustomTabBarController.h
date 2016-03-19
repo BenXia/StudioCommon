@@ -14,4 +14,6 @@
 @property (nonatomic, strong) UIColor *selectedTitleColor;
 @property (nonatomic, strong) UIColor *tabBarBackgroundColor;
 
+@property (nonatomic, assign) CGFloat tabBarButtonOffsetY;
+
 @end

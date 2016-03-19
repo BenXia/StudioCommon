@@ -24,9 +24,6 @@
           normalTitleColor:(UIColor *)normalTitleColor
         selectedTitleColor:(UIColor *)selectedTitleColor {
 	CustomTabBarButton *btn = [[CustomTabBarButton alloc] init];
-
-	[btn setImage:image forState:UIControlStateNormal];
-	[btn setImage:selectedImage forState:UIControlStateSelected];
     
     NSDictionary *normalTitleTextAttributesDict = [[UITabBarItem appearance] titleTextAttributesForState:UIControlStateNormal];
     NSDictionary *selectedTitleTextAttributesDict = [[UITabBarItem appearance] titleTextAttributesForState:UIControlStateSelected];
@@ -46,7 +43,7 @@
     
     if (!selectedTitleColor) {
         if ([selectedTitleTextAttributesDict objectForKey:NSForegroundColorAttributeName]) {
-            [btn setTitleColor:[normalTitleTextAttributesDict objectForKey:NSForegroundColorAttributeName]
+            [btn setTitleColor:[selectedTitleTextAttributesDict objectForKey:NSForegroundColorAttributeName]
                       forState:UIControlStateSelected];
         } else {
             [btn setTitleColor:[UIColor themeBlueColor]
@@ -61,19 +58,25 @@
         btn.normalTitleFont = [normalTitleTextAttributesDict objectForKey:NSFontAttributeName];
         [btn setSelected:NO];
     } else {
-        btn.normalTitleFont = [UIFont systemFontOfSize:14.0];
+        btn.normalTitleFont = [UIFont systemFontOfSize:13.0];
         [btn setSelected:NO];
     }
     
     if ([selectedTitleTextAttributesDict objectForKey:NSFontAttributeName]) {
         btn.selectedTitleFont = [selectedTitleTextAttributesDict objectForKey:NSFontAttributeName];
     } else {
-        btn.selectedTitleFont = [UIFont systemFontOfSize:14.0];
+        btn.selectedTitleFont = [UIFont systemFontOfSize:13.0];
     }
     
     if (title.length > 0) {
+        [btn setImage:image forState:UIControlStateNormal];
+        [btn setImage:selectedImage forState:UIControlStateSelected];
+        
         [btn setTitle:title forState:UIControlStateNormal];
-        [btn centerImageAndTitle];
+        [btn centerImageAndTitle:1.0f];
+    } else {
+        [btn setImage:image forState:UIControlStateNormal];
+        [btn setImage:selectedImage forState:UIControlStateSelected];
     }
 
 	[self addSubview:btn];
@@ -84,6 +87,12 @@
 	if (self.subviews.count == 1) {
 		[self clickCustomTabBarButtonAction:btn];
 	}
+}
+
+- (void)setTabBarButtonOffsetY:(CGFloat)tabBarButtonOffsetY {
+    _tabBarButtonOffsetY = tabBarButtonOffsetY;
+    
+    [self setNeedsLayout];
 }
 
 // 专门用来布局子视图, 别忘了调用super方法
@@ -98,10 +107,16 @@
 		btn.tag = i; //设置按钮的标记, 方便来索引当前的按钮,并跳转到相应的视图
 
 		CGFloat x = i * self.bounds.size.width / count;
-		CGFloat y = 0;
+		CGFloat y = _tabBarButtonOffsetY;
 		CGFloat width = self.bounds.size.width / count;
 		CGFloat height = self.bounds.size.height;
-		btn.frame = CGRectMake(x, y, width, height);
+		btn.frame = CGRectMake(x, y, width, height - y);
+        
+        NSLog (@"y: %f  height-y: %f", y, height - y);
+        
+        if ([btn titleForState:UIControlStateNormal].length > 0) {
+            [btn centerImageAndTitle:1.0f];
+        }
 	}
 }
 

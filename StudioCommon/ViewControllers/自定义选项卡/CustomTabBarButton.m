@@ -18,9 +18,9 @@
     [super setSelected:selected];
     
     if (selected) {
-        self.titleLabel.font = self.normalTitleFont;
-    } else {
         self.titleLabel.font = self.selectedTitleFont;
+    } else {
+        self.titleLabel.font = self.normalTitleFont;
     }
 }
 
