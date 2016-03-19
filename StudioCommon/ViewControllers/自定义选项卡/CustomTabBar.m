@@ -112,8 +112,6 @@
 		CGFloat height = self.bounds.size.height;
 		btn.frame = CGRectMake(x, y, width, height - y);
         
-        NSLog (@"y: %f  height-y: %f", y, height - y);
-        
         if ([btn titleForState:UIControlStateNormal].length > 0) {
             [btn centerImageAndTitle:1.0f];
         }
