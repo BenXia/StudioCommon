@@ -105,6 +105,9 @@
 // ViewControllers.
 #import "QQingWindowRootViewController.h"
 #import "QQingPhotosBrowserVC.h"
+#import "CustomTabBarButton.h"
+#import "CustomTabBar.h"
+#import "CustomTabBarController.h"
 
 #endif
 
