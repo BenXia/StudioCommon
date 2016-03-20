@@ -38,6 +38,8 @@
 
 - (UIColor *)themeBlueColor;
 - (UIColor *)themeDarkBlueColor;
+- (UIColor *)themeLightBlueColor;
+- (UIColor *)themeRedColor;
 - (UIColor *)themeGreenColor;
 - (UIColor *)themeCyanColor;
 - (UIColor *)themeButtonBlueColor;

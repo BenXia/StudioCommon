@@ -22,6 +22,14 @@
     return [UIColor colorWithRGBHex:0x2e4075];
 }
 
+- (UIColor *)themeLightBlueColor {
+    return [UIColor colorWithRGBHex:0x617ac4];
+}
+
+- (UIColor *)themeRedColor {
+    return [UIColor colorWithRGBHex:0xda2f1d];
+}
+
 - (UIColor *)themeButtonBlueColor {
     return [UIColor colorWithRGBHex:0x33a7e4];
 }

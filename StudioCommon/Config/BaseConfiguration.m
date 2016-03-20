@@ -101,6 +101,14 @@
     return [UIColor colorWithRed:61.0/255 green:183.0/255 blue:235.0/255 alpha:1];
 }
 
+- (UIColor *)themeLightBlueColor {
+    return [UIColor colorWithRGBHex:0x617ac4];
+}
+
+- (UIColor *)themeRedColor {
+    return [UIColor colorWithRGBHex:0xda2f1d];
+}
+
 - (UIColor *)themeBackGrayColor {
     return [UIColor colorWithRGBHex:0xe6e6e6];
 }
