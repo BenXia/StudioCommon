@@ -73,7 +73,7 @@
         [btn setImage:selectedImage forState:UIControlStateSelected];
         
         [btn setTitle:title forState:UIControlStateNormal];
-        [btn centerImageAndTitleWithSpace:1.0f];
+        [btn centerImageAndTitleWithSpace:0.0f];
     } else {
         [btn setImage:image forState:UIControlStateNormal];
         [btn setImage:selectedImage forState:UIControlStateSelected];
@@ -113,7 +113,7 @@
 		btn.frame = CGRectMake(x, y, width, height - y);
         
         if ([btn titleForState:UIControlStateNormal].length > 0) {
-            [btn centerImageAndTitleWithSpace:1.0f];
+            [btn centerImageAndTitleWithSpace:0.0f];
         }
 	}
 }
