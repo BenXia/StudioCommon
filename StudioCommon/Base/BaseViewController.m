@@ -72,20 +72,19 @@ static const CGFloat kNavigationItemFontSize = 16.0f;
             }
         }
     } appTxtd:^{
-        [self setNavBackButtonWithTitle:@"返回"];
+        NSString* preferNavBackTitle = [self preferNavBackButtonTitle];
+        if (preferNavBackTitle.length > 0) {
+            if (self != [self.navigationController.viewControllers firstObject]) {
+                [self setNavBackButtonWithTitle:@"返回"];
+            }
+        } else {
+            if (self != [self.navigationController.viewControllers firstObject]) {
+                [self setNavLeftItemWithImage:@"btn_back_white" target:self action:@selector(didClickOnBackButton)];
+            }
+        }        
     } appTemplateProject:^{
         [self setNavBackButtonWithTitle:@"返回"];
     }];
-    
-//    NSString* preferNavBackTitle = [self preferNavBackButtonTitle];
-//    if (preferNavBackTitle.length > 0) {
-        //[self setNavBackButtonWithTitle:preferNavBackTitle];
-        [self setNavBackButtonWithTitle:@"返回"];
-//    } else {
-//        if (self != [self.navigationController.viewControllers firstObject]) {
-//            [self setNavLeftItemWithImage:@"btn_back_white" target:self action:@selector(didClickOnBackButton)];
-//        }
-//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated{
