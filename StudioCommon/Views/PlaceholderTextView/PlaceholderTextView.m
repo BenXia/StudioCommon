@@ -132,16 +132,19 @@ static const CGFloat UI_PLACEHOLDER_TEXT_CHANGED_ANIMATION_DURATION = 0.25;
         
         _placeHolderLabel.text = self.placeholder;
         
-        if (_placeholderType == PlaceholderType_Left) {//暂用于P吧
+        if (_placeholderType == PlaceholderType_Left) {
             _placeHolderLabel.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
             _placeHolderLabel.textAlignment = NSTextAlignmentLeft;
             _placeHolderLabel.backgroundColor = [UIColor clearColor];
             _placeHolderLabel.layer.cornerRadius = 5.0;
             _placeHolderLabel.layer.masksToBounds = YES;
-        }else if (_placeholderType == PlaceholderType_Middel) {//球友圈
+        } else if (_placeholderType == PlaceholderType_Middel) {
             _placeHolderLabel.textAlignment = NSTextAlignmentCenter;
-        }else if (_placeholderType == PlaceholderType_Right) {//暂时没用到
+        } else if (_placeholderType == PlaceholderType_Right) {
             _placeHolderLabel.textAlignment = NSTextAlignmentRight;
+        } else if (_placeholderType == PlaceholderType_Center) {
+            _placeHolderLabel.frame = CGRectMake(self.spaceForPlaceHodlerType, 0, self.bounds.size.width - 2 *self.spaceForPlaceHodlerType, self.bounds.size.height);
+            _placeHolderLabel.textAlignment = NSTextAlignmentCenter;
         }
         
         [self sendSubviewToBack:_placeHolderLabel];
