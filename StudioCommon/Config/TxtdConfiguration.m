@@ -15,15 +15,23 @@
 // ===============================================
 
 - (UIColor *)themeBlueColor {
-    return [UIColor colorWithRed:56.0/255 green:115.0/255 blue:181.0/255 alpha:1];
+    return [UIColor colorWithRGBHex:0x344783];
+}
+
+- (UIColor *)themeDarkBlueColor {
+    return [UIColor colorWithRGBHex:0x2e4075];
 }
 
 - (UIColor *)themeButtonBlueColor {
-    return [UIColor colorWithRGBHex:0x33A7E4];
+    return [UIColor colorWithRGBHex:0x33a7e4];
+}
+
+- (UIColor*)themeGreenColor{
+    return [UIColor colorWithRGBHex:0x63ba44];
 }
 
 - (UIColor *)themeCyanColor {
-    return [UIColor colorWithRed:61.0/255 green:183.0/255 blue:235.0/255 alpha:1];
+    return [UIColor colorWithRGBHex:0x347fa9];
 }
 
 - (UIColor *)themeBackGrayColor {

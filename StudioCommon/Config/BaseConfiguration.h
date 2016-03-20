@@ -37,6 +37,8 @@
 // ===============================================
 
 - (UIColor *)themeBlueColor;
+- (UIColor *)themeDarkBlueColor;
+- (UIColor *)themeGreenColor;
 - (UIColor *)themeCyanColor;
 - (UIColor *)themeButtonBlueColor;
 - (UIColor *)themeBackGrayColor;
