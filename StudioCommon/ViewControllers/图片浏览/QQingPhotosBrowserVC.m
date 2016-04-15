@@ -302,7 +302,8 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
                                                                  kToolViewHeight - kButtonHeight,
                                                                  kButtonWidth,
                                                                  kButtonHeight)];
-        [_backButton setImage:[UIImage imageNamed:@"common_topnav_icon01"] forState:UIControlStateNormal];
+        NSString *backImagePath = [[[NSBundle studioCommonBundle] resourcePath] stringByAppendingPathComponent:@"common_topnav_icon01.png"];
+        [_backButton setImage:[UIImage imageWithContentsOfFile:backImagePath] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(closeAction:) forControlEvents:UIControlEventTouchUpInside];
         _backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         [_toolView addSubview:_backButton];
@@ -311,7 +312,10 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
                                                                    kToolViewHeight - kButtonHeight,
                                                                    kButtonWidth,
                                                                    kButtonHeight)];
-        [_actionButton setImage:[UIImage imageNamed:_isEditMode ? @"topnav_icon08" : @"common_topnav_icon02"] forState:UIControlStateNormal];
+        NSString *deleteImagePath = [[[NSBundle studioCommonBundle] resourcePath] stringByAppendingPathComponent:@"common_topnav_icon08.png"];
+        NSString *saveImagePath = [[[NSBundle studioCommonBundle] resourcePath] stringByAppendingPathComponent:@"common_topnav_icon02.png"];
+        
+        [_actionButton setImage:[UIImage imageWithContentsOfFile:_isEditMode ? deleteImagePath : saveImagePath] forState:UIControlStateNormal];
         [_actionButton addTarget:self action:_isEditMode ? @selector(deleteAction:) : @selector(savePhotoToLocalAction:) forControlEvents:UIControlEventTouchUpInside];
         _actionButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         [_toolView addSubview:_actionButton];
@@ -598,7 +602,8 @@ static const NSTimeInterval kCloseAnimationDuration = 0.3;
     } else {
         MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:HUD];
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_completed_icon"]];
+        NSString *imagePath = [[[NSBundle studioCommonBundle] resourcePath] stringByAppendingPathComponent:@"common_completed_icon.png"];
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:imagePath]];
         HUD.mode = MBProgressHUDModeCustomView;
         HUD.labelText = @"图片已保存";
         [HUD show:YES];
