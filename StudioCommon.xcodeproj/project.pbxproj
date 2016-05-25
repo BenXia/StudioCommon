@@ -172,7 +172,6 @@
 		93EBD6D81C7F306C005FA9A1 /* ShareParamBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6D61C7F306C005FA9A1 /* ShareParamBuilder.m */; };
 		93EBD6DB1C7F3731005FA9A1 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EBD6DA1C7F3731005FA9A1 /* ShareManager.m */; };
 		93F2A0081C49E2380034486B /* UserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A0071C49E2380034486B /* UserCache.m */; };
-		93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; };
 		93F2A00F1C49E42E0034486B /* ArchiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00E1C49E42E0034486B /* ArchiveRecord.m */; };
 		93F2A01B1C49F6800034486B /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F2A00B1C49E2F40034486B /* UICKeyChainStore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5F3857C1C43750900E666F7 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5F3854B1C43750900E666F7 /* POPAnimatableProperty.mm */; };
@@ -2039,7 +2038,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F2A00C1C49E2F40034486B /* UICKeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
